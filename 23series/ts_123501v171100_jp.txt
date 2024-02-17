@@ -1,0 +1,181 @@
+1 範囲 この仕様は、5Gシステム（5GS）のシステムアーキテクチャについて定義し、5GSの機能、機能エンティティ、および参照ポイントを記述します。また、5GSの高レベルの機能とサービスも説明します。
+2 参考文献 この仕様は、以下の文献に基づいています。文献の最新版が適用されます。
+1 3GPP TS 21.905: “Vocabulary for 3GPP Specifications”.
+2 3GPP TS 22.101: “Service aspects; Service principles”.
+[3] 3GPP TS 22.104: “Service requirements for cyber-physical control applications in vertical domains”.
+[4] 3GPP TS 22.261: “Service requirements for the 5G system; Stage 1”.
+[5] 3GPP TS 22.278: “Service requirements for the Evolved Packet System (EPS)”.
+[6] 3GPP TS 22.280: “Mission Critical Services (MCS) common requirements”.
+[7] 3GPP TS 22.281: “Mission Critical Push To Talk (MCPTT) over LTE; Stage 1”.
+[8] 3GPP TS 22.282: “Mission Critical Data (MCData) over LTE; Stage 1”.
+[9] 3GPP TS 22.283: “Mission Critical Video (MCVideo) over LTE; Stage 1”.
+[10] 3GPP TS 22.285: “Enhanced V2X services; Stage 1”.
+[11] 3GPP TS 22.286: “Proximity-based Services (ProSe); Stage 1”.
+[12] 3GPP TS 22.289: “Public Warning System (PWS) requirements”.
+[13] 3GPP TS 22.290: “Multimedia Priority Service (MPS) requirements”.
+[14] 3GPP TS 22.291: “Location Services (LCS) requirements”.
+[15] 3GPP TS 22.292: “IP Multimedia Core Network Subsystem (IMS) Emergency Sessions”.
+[16] 3GPP TS 22.293: “IP Multimedia Subsystem (IMS) media plane security”.
+[17] 3GPP TS 22.294: “IP Multimedia Subsystem (IMS) conversational video service; Service description; Stage 1”.
+[18] 3GPP TS 22.295: “IP Multimedia Subsystem (IMS) Service Continuity; Stage 1”.
+[19] 3GPP TS 22.296: “IP Multimedia Subsystem (IMS) Restoration Procedures; Stage 1”.
+[20] 3GPP TS 22.300: “Generic Authentication Architecture (GAA); System description”.
+[21] 3GPP TS 22.340: “Group Communication System Requirements for Mission Critical Communication”.
+[22] 3GPP TS 22.346: “Multimedia Broadcast/Multicast Service (MBMS); Stage 1”.
+[23] 3GPP TS 22.368: “Service requirements for Machine-Type Communications (MTC); Stage 1”.
+[24] 3GPP TS 22.371: “Service requirements for the 5G system to support Vehicle-to-Everything (V2X) services”.
+[25] 3GPP TS 22.372: “Application layer support for V2X services”.
+[26] 3GPP TS 22.373: “5G System (5GS) to Wireless Local Area Network (WLAN) interworking; Stage 1”.
+[27] 3GPP TS 22.376: “Mission Critical Services (MCS) interworking with legacy systems”.
+[28] 3GPP TS 22.377: “Mission Critical Services (MCS) application protocols”.
+[29] 3GPP TS 22.378: “Mission Critical Services (MCS) common functional architecture”.
+[30] 3GPP TS 22.379: “Mission Critical Services (MCS) open mobile service interface”.
+[31] 3GPP TS 22.380: “Mission Critical Services (MCS) management object”.
+[32] 3GPP TS 22.381: “Mission Critical Services (MCS) test specification”.
+[33] 3GPP TS 22.382: “Mission Critical Services (MCS) security”.
+[34] 3GPP TS 22.383: “Mission Critical Services (MCS) configuration management”.
+[35] 3GPP TS 22.384: “Mission Critical Services (MCS) performance management”.
+[36] 3GPP TS 22.385: “Mission Critical Services (MCS) fault management”.
+[37] 3GPP TS 22.386: “Mission Critical Services (MCS) charging management”.
+[38] 3GPP TS 22.387: “Mission Critical Services (MCS) logging management”.
+[39] 3GPP TS 22.388: “Mission Critical Services (MCS) identity management”.
+[40] 3GPP TS 22.389: “Mission Critical Services (MCS) provisioning management”.
+[41] 3GPP TS 22.390: “Mission Critical Services (MCS) resource management”.
+[42] 3GPP TS 22.391: “Mission Critical Services (MCS) policy and charging control management”.
+[43] 3GPP TS 22.392: “Mission Critical Services (MCS) discovery management”.
+[44] 3GPP TS 22.393: “Mission Critical Services (MCS) access management”.
+[45] 3GPP TS 22.394: “Mission Critical Services (MCS) user management”.
+[46] 3GPP TS 22.395: “Mission Critical Services (MCS) group management”.
+[47] 3GPP TS 22.396: “Mission Critical Services (MCS) affiliation and de-affiliation management”.
+[48] 3GPP TS 22.397: “Mission Critical Services (MCS) floor control management”.
+[49] 3GPP TS 22.398: “Mission Critical Services (MCS) call control management”.
+[50] 3GPP TS 22.399: “Mission Critical Services (MCS) data control management”.
+[51] 3GPP TS 22.400: “Mission Critical Services (MCS) video control management”.
+[52] 3GPP TS 22.401: “Mission Critical Services (MCS) location management”.
+[53] 3GPP TS 22.402: “Mission Critical Services (MCS) alert management”.
+[54] 3GPP TS 22.403: “Mission Critical Services (MCS) emergency management”.
+[55] 3GPP TS 22.404: “Mission Critical Services (MCS) remote management”.
+[56] 3GPP TS 22.405: “Mission Critical Services (MCS) interoperability management”.
+[57] 3GPP TS 22.406: “Mission Critical Services (MCS) roaming management”.
+[58] 3GPP TS 22.407: “Mission Critical Services (MCS) quality of service management”.
+[59] 3GPP TS 22.408: “Mission Critical Services (MCS) priority management”.
+[60] 3GPP TS 22.409: “Mission Critical Services (MCS) availability management”.
+[61] 3GPP TS 22.410: “Mission Critical Services (MCS) reliability management”.
+[62] 3GPP TS 22.411: “Mission Critical Services (MCS) resilience management”.
+[63] 3GPP TS 22.412: “Mission Critical Services (MCS) redundancy management”.
+[64] 3GPP TS 22.413: “Mission Critical Services (MCS) recovery management”.
+[65] 3GPP TS 22.414: “Mission Critical Services (MCS) continuity management”.
+[66] 3GPP TS 22.415: “Mission Critical Services (MCS) synchronization management”.
+[67] 3GPP TS 22.416: “Mission Critical Services (MCS) event management”.
+[68] 3GPP TS 22.417: “Mission Critical Services (MCS) notification management”.
+[69] 3GPP TS 38.306: "NR; User Equipment -UE) radio access capabilities". 
+[70] 3GPP TS 36.306: "Evolved Universal Terrestrial Radio Access -E-UTRA); User Equipment -UE) 
+radio access capabilities". 
+[71] 3GPP TS 29.518: "5G System; Access and Mobility Management Services; Stage 3". 
+[72] 3GPP TS 23.285: "Architecture enhancements for V2X services". 
+[73] IETF RFC 2865: "Remote Authentication Dial In User Service (RADIUS)". 
+[74] IETF RFC 3162: "RADIUS and IPv6"
+[75] 3GPP TS 29.281: "General Packet Radio System (GPRS) Tunnelling Protocol User Plane
+(GTPv1-U)".
+[76] 3GPP TS 26.238: "Uplink streaming".
+[77] 3GPP TR 26.939: "Guidelines on the Framework for Live Uplink Streaming (FLUS)".
+[78] International Telecommunication Union (ITU), Standardization Bureau (TSB): "Operational
+Bulletin No. 1156"; http://handle.itu.int/11.1002/pub/810cad63-en (retrieved October 5, 2018).
+[79] 3GPP TS 28.533: "Management and orchestration; Architecture framework".
+[80] 3GPP TS 24.250: "Protocol for Reliable Data Service; Stage 3".
+[81] IETF RFC 8684: "TCP Extensions for Multipath Operation with Multiple Addresses".
+[82] IETF RFC 8803: "0-RTT TCP Convert Protocol".
+[83] IEEE Std 802.1CB-2017: "IEEE Standard for Local and metropolitan area networks-Frame
+Replication and Elimination for Reliability".
+[84] 3GPP TS 23.316: "Wireless and wireline convergence access support for the 5G System (5GS)".
+[85] WiFi Alliance Technical Committee, Hotspot 2.0 Technical Task Group: "Hotspot 2.0 (Release 2)
+Technical Specification".
+[86] 3GPP TS 23.288: "Architecture enhancements for 5G System (5GS) to support network data
+analytics services".
+[87] 3GPP TS 23.273: "5G System (5GS) Location Services (LCS); Stage 2".
+[88] 3GPP TS 23.216: "Single Radio Voice Call Continuity (SRVCC); Stage 2".
+[89] CableLabs DOCSIS MULPI: "Data-Over-Cable Service Interface Specifications DOCSIS 3.1,
+MAC and Upper Layer Protocols Interface Specification".
+[90] BBF TR-124 issue 5: "Functional Requirements for Broadband Residential Gateway Devices".
+[91] BBF TR-101 issue 2: "Migration to Ethernet-Based Broadband Aggregation".
+[92] BBF TR-178 issue 1: "Multi-service Broadband Network Architecture and Nodal Requirements".
+[93] BBF TR-456 issue 2: "AGF Functional Requirements".
+[94] BBF WT-457: "FMIF Functional Requirement
+[95] IEEE Std 802.1Qcc-2018: "IEEE Standard for Local and metropolitan area networks - Bridges and
+Bridged Networks - Amendment: Stream Reservation Protocol (SRP) Enhancements and
+Performance Improvements".
+[96] Void.
+[97] IEEE Std 802.1AB-2016: "IEEE Standard for Local and metropolitan area networks -- Station and
+Media Access Control Connectivity Discovery".
+[98] IEEE Std 802.1Q-2018: "IEEE Standard for Local and metropolitan area networks--Bridges and
+Bridged Networks".
+[99] 3GPP TS 38.423: "NG-RAN; Xn Application Protocol (XnAP)".
+[100] 3GPP TS 36.413: "Evolved Universal Terrestrial Radio Access Network (E-UTRAN); S1
+Application Protocol (S1AP)".
+[101] 3GPP TS 29.274: "Evolved General Packet Radio Service (GPRS) Tunnelling Protocol for Control
+plane (GTPv2-C); Stage 3".
+[102] 3GPP TS 23.632: "User Data Interworking, Coexistence and Migration; stage 2".
+[103] 3GPP TS 29.563: "5G System (5GS); HSS services for interworking with UDM; Stage 3".
+[104] IEEE Std 802.1AS-2020: "IEEE Standard for Local and metropolitan area networks--Timing and
+Synchronization for Time-Sensitive Applications".
+[105] 3GPP TS 22.104: "Service requirements for cyber-physical control applications in vertical
+domains".
+[106] IEEE Std 802.11-2012: "IEEE Standard for Information technology - Telecommunications and
+information exchange between systems - Local and metropolitan area networks - Specific
+requirements - Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY)
+Specifications".
+[107] IEEE Std 1588-2008: "IEEE Standard for a Precision Clock Synchronization Protocol for
+Networked Measurement and Control Systems".
+[108] 3GPP TS 28.552: "Management and orchestration; 5G performance measurements".
+[109] 3GPP TS 24.193: "Access Traffic Steering, Switching and Splitting; Stage 3".
+[110] 3GPP TS 24.526: "User Equipment (UE) policies for 5G System (5GS); Stage 3".
+[111] 3GPP TS 22.186: "Enhancement of 3GPP support for V2X scenarios; Stage 1".
+[112] 3GPP TR 38.824: "Study on physical layer enhancements for NR ultra-reliable and low latency
+case (URLLC)".
+[113] IEEE: "Guidelines for Use of Extended Unique Identifier (EUI), Organizationally Unique
+Identifier (OUI), and Company ID (CID)", https://standards.ieee.org/content/dam/ieeestandards/standards/web/documents/tutorials/eui.pdf.
+[114] 3GPP TS 32.256: "Charging Management; 5G connection and mobility domain charging; Stage
+2".
+[115] 3GPP TS 33.210: "Network Domain Security (NDS); IP network layer security".
+[116] 3GPP TS 38.415: "PDU Session User Plane Protocol".
+[117] 3GPP TS 24.535: "Device-side Time-Sensitive Networking (TSN) Translator (DS-TT) to networkside TSN Translator (NW-TT) protocol aspects; Stage 3".
+[118] 3GPP TS 32.274: "Charging Management; Short Message Service (SMS) charging".
+[119] 3GPP TS 23.008: "Organization of subscriber data".
+[120] 3GPP TS 38.314: "NR; Layer 2 measurements".
+[121] 3GPP TS 23.287: "Architecture enhancements for 5G System (5GS) to support Vehicle-toEverything (V2X) services".
+[122] 3GPP TS 29.503: "5G System; Unified Data Management Services; Stage 3".
+[123] 3GPP TS 32.254: "Charging management; Exposure function Northbound Application Program
+Interfaces (APIs) charging".
+[124] 3GPP TS 33.535: "Authentication and Key Management for Applications based on 3GPP
+credentials in the 5G System (5GS)".
+[125] 3GPP TS 38.410: "NG-RAN; NG general aspects and principles".
+[126] IEEE Std 1588: "IEEE Standard for a Precision Clock Synchronization Protocol for Networked
+Measurement and Control Systems", Edition 2019.
+[127] ST 2059-2:2015: "SMPTE Standard - SMPTE Profile for Use of IEEE-1588 Precision Time
+Protocol in Professional Broadcast Applications".
+[128] 3GPP TS 23.304: "Proximity based Services (ProSe) in the 5G System (5GS)".
+[129] 3GPP TS 23.247: "Architectural enhancements for 5G multicast-broadcast services".
+[130] 3GPP TS 23.548 "5G System Enhancements for Edge Computing; Stage 2".
+[131] IEEE Std 802.3: "Ethernet".
+[132] 3GPP TS 29.561: "5G System; Interworking between 5G Network and external Data Networks;
+Stage 3".
+[133] 3GPP TS 29.513: "Policy and Charging Control signalling flows and QoS parameter mapping;
+Stage 3".
+[134] 3GPP TS 23.558: "Architecture for enabling Edge Applications (EA)".
+[135] 3GPP TS 26.501: "5G Media Streaming (5GMS); General description and architecture".
+[136] 3GPP TS 23.256 "Support of Uncrewed Aerial Systems (UAS) connectivity, identification and
+tracking; Stage 2".
+[137] GSMA NG.116: "Generic Network Slice Template".
+[138] IETF RFC 3948: "UDP Encapsulation of IPsec ESP Packets".
+[139] 3GPP TS 24.539: "5G System (5GS); Network to TSN translator (TT) protocol aspects; Stage 3".
+[140] 3GPP TS 33.220: "Generic Authentication Architecture (GAA); Generic bootstrapping
+architecture".
+[141] 3GPP TS 33.223: "Generic Authentication Architecture (GAA); Generic Bootstrapping
+Architecture (GBA) Push function".
+[142] 3GPP TS 23.540: "Technical realization of Service Based Short Message Service; Stage 2".
+[143] 3GPP TS 38.321: "NR; Medium Access Control (MAC) protocol specification".
+[144] 3GPP TS 29.525: "5G System; UE Policy Control Service; Stage 3".
+[145] 3GPP TS 29.505: "5G System; Usage of the Unified Data Repository Services for Subscription
+Data; Stage 3".
+[146] IETF RFC 8415: "Dynamic Host Configuration Protocol for IPv6 (DHCPv6)".
+[147] 3GPP TS 23.289: "Mission Critical services over 5G System; Stage 2".
