@@ -1,7 +1,7 @@
 1 範囲 この仕様は、5Gシステム（5GS）のシステムアーキテクチャについて定義し、5GSの機能、機能エンティティ、および参照ポイントを記述します。また、5GSの高レベルの機能とサービスも説明します。
 2 参考文献 この仕様は、以下の文献に基づいています。文献の最新版が適用されます。
-1 3GPP TS 21.905: “Vocabulary for 3GPP Specifications”.
-2 3GPP TS 22.101: “Service aspects; Service principles”.
+[1] 3GPP TS 21.905: “Vocabulary for 3GPP Specifications”.
+[2] 3GPP TS 22.101: “Service aspects; Service principles”.
 [3] 3GPP TS 22.104: “Service requirements for cyber-physical control applications in vertical domains”.
 [4] 3GPP TS 22.261: “Service requirements for the 5G system; Stage 1”.
 [5] 3GPP TS 22.278: “Service requirements for the Evolved Packet System (EPS)”.
