@@ -157,26 +157,20 @@ Protocol in Professional Broadcast Applications".
 [129] 3GPP TS 23.247: "Architectural enhancements for 5G multicast-broadcast services".
 [130] 3GPP TS 23.548 "5G System Enhancements for Edge Computing; Stage 2".
 [131] IEEE Std 802.3: "Ethernet".
-[132] 3GPP TS 29.561: "5G System; Interworking between 5G Network and external Data Networks;
-Stage 3".
-[133] 3GPP TS 29.513: "Policy and Charging Control signalling flows and QoS parameter mapping;
-Stage 3".
+[132] 3GPP TS 29.561: "5G System; Interworking between 5G Network and external Data Networks; Stage 3".
+[133] 3GPP TS 29.513: "Policy and Charging Control signalling flows and QoS parameter mapping; Stage 3".
 [134] 3GPP TS 23.558: "Architecture for enabling Edge Applications (EA)".
 [135] 3GPP TS 26.501: "5G Media Streaming (5GMS); General description and architecture".
-[136] 3GPP TS 23.256 "Support of Uncrewed Aerial Systems (UAS) connectivity, identification and
-tracking; Stage 2".
+[136] 3GPP TS 23.256 "Support of Uncrewed Aerial Systems (UAS) connectivity, identification and tracking; Stage 2".
 [137] GSMA NG.116: "Generic Network Slice Template".
 [138] IETF RFC 3948: "UDP Encapsulation of IPsec ESP Packets".
 [139] 3GPP TS 24.539: "5G System (5GS); Network to TSN translator (TT) protocol aspects; Stage 3".
-[140] 3GPP TS 33.220: "Generic Authentication Architecture (GAA); Generic bootstrapping
-architecture".
-[141] 3GPP TS 33.223: "Generic Authentication Architecture (GAA); Generic Bootstrapping
-Architecture (GBA) Push function".
+[140] 3GPP TS 33.220: "Generic Authentication Architecture (GAA); Generic bootstrapping architecture".
+[141] 3GPP TS 33.223: "Generic Authentication Architecture (GAA); Generic Bootstrapping Architecture (GBA) Push function".
 [142] 3GPP TS 23.540: "Technical realization of Service Based Short Message Service; Stage 2".
 [143] 3GPP TS 38.321: "NR; Medium Access Control (MAC) protocol specification".
 [144] 3GPP TS 29.525: "5G System; UE Policy Control Service; Stage 3".
-[145] 3GPP TS 29.505: "5G System; Usage of the Unified Data Repository Services for Subscription
-Data; Stage 3".
+[145] 3GPP TS 29.505: "5G System; Usage of the Unified Data Repository Services for Subscription Data; Stage 3".
 [146] IETF RFC 8415: "Dynamic Host Configuration Protocol for IPv6 (DHCPv6)".
 [147] 3GPP TS 23.289: "Mission Critical services over 5G System; Stage 2".
 
@@ -189,3 +183,43 @@ Data; Stage 3".
 	・セキュリティアーキテクチャは、TS 33.501 [29]およびTS 33.535 [124]で説明されています。
 	・課金アーキテクチャは、TS 32.240 [41]で説明されています。
 	・5Gメディアストリーミングアーキテクチャは、TS 26.501 [135]で説明されています。 注 2：4.2.2節に記載されているNFは、以下の条項または上記の仕様書で説明されています。
+
+4.2.2
+5Gシステムのアーキテクチャは、以下のネットワーク機能（NF）で構成されています。
+	- Authentication Server Function (AUSF).
+	- Access and Mobility Management Function (AMF).
+	- Data Network (DN), e.g. operator services, Internet access or 3rd party services.
+	- Unstructured Data Storage Function (UDSF).
+	- Network Exposure Function (NEF).
+	- Network Repository Function (NRF).
+	- Network Slice Admission Control Function (NSACF).
+	- Network Slice-specific and SNPN Authentication and Authorization Function (NSSAAF).
+	- Network Slice Selection Function (NSSF).
+	- Policy Control Function (PCF).
+	- Session Management Function (SMF).
+	- Unified Data Management (UDM).
+	- Unified Data Repository (UDR).
+	- User Plane Function (UPF).
+	- UE radio Capability Management Function (UCMF).
+	- Application Function (AF).
+	- User Equipment (UE).
+	- (Radio) Access Network ((R)AN).
+	- 5G-Equipment Identity Register (5G-EIR).
+	- Network Data Analytics Function (NWDAF).
+	- CHarging Function (CHF).
+	- Time Sensitive Networking AF (TSN AF).
+	- Time Sensitive Communication and Time Synchronization Function (TSCTSF).
+	- Data Collection Coordination Function (DCCF).
+	- Analytics Data Repository Function (ADRF).
+	- Messaging Framework Adaptor Function (MFAF).
+	- Non-Seamless WLAN Offload Function (NSWOF).
+	注：DCCFおよび/またはADRFが提供する機能は、NWDAFによってもホストされることができます。
+	- Edge Application Server Discovery Function (EASDF).
+	5Gシステムのアーキテクチャには、以下のネットワークエンティティも含まれます。
+	- Service Communication Proxy (SCP).
+	- Security Edge Protection Proxy (SEPP). 
+	これらのネットワーク機能とエンティティの機能的な説明は、第6節で規定されています。
+	- Non-3GPP InterWorking Function (N3IWF).
+	- Trusted Non-3GPP Gateway Function (TNGF).
+	- Wireline Access Gateway Function (W-AGF).
+	- Trusted WLAN Interworking Function (TWIF).
