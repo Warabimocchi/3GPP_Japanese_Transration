@@ -261,6 +261,78 @@ Binding Indication: Information included by a NF service producer to a NF servic
 BSF Group ID: 特定のSUPIセットまたはGPSIセットを管理する1つ以上のBSFインスタンスを指す。BSF Groupは1つまたは複数のBSF Setで構成される。
 BSF Group ID: This refers to one or more BSF instances managing a specific set of SUPIs or GPSIs. A BSF Group consists of one or multiple BSF Sets.
 
+Configured NSSAI: 1つ以上ウノPLMNに適用sれるUEにプロビジョニングされたNSSAI。
+Configured NSSAI: NSSAI provisioned in the UE applicable to one or more PLMNs.
+
+CHF Group ID: 特定のSUPIの集合を管理する一つ以上のCHFインスタンスを指す。
+CHF Group ID: This refers to one or more CHF instances managing a specific set of SUPIs.
+
+Credentials Holder: Credentials Holderとは別のSNPNへのアクセスを認証・認可するエンティティ。
+Credentials Holder: Entity which authenticates and authorizes access to an SNPN separate from the Credentials Holder. 
+
+Default UE credentials: UEを一意に識別し、UEのオンボーディングを行うために安全に検証できるようにするUEに設定された情報。
+Default UE credentials: Information configured in the UE to make the UE uniquely identifiable and verifiably secure to perform UE onboarding.
+
+Default Credentials Server (DCS): Default UE credentialsに基づいて認証を行うか、別のエンティティがDefault UE credentialsに基づいて認証を行うための手段を提供するエンティティ。
+Default Credentials Server (DCS): An entity that can perform authentication based on the Default UE credentials or provide means for another entity to perform authentication based on the Default UE credentials. 
+
+Delegated Discovery: NFインスタンスやNFサービスインスタンスの発見と選択をSCPに委任することを指す。
+Delegated Discovery: This refers to delegating the discovery and associated selection of NF instances or NF service instances to an SCP.
+
+Direct Communication: NFやNFサービス間のSCPを使用しない通信を指す。
+Direct Communication: This refers to the communication between NFs or NF services without using an SCP.
+
+Disaster Condition: TS 22.261 [2]で定義されている通り。
+Disaster Condition: See definition in TS 22.261 [2].
+
+Disaster Inbound Roamer: TS 22.261 [2]で定義されている通り。
+Disaster Inbound Roamer: See definition in TS 22.261 [2].
+
+Disaster Roaming: TS 22.261 [2]で定義されている通り。
+Disaster Roaming: See definition in TS 22.261 [2]
+
+DN Access Identifier (DNAI): アプリケーションが展開されている一つ以上のDNへのユーザプレーンアクセスの識別子。
+DN Access Identifier (DNAI): Identifier of a user plane access to one or more DN(s) where applications are deployed.
+
+Emergency Registered: UEがあるアクセスタイプであるPLMNにおいて、緊急サービスのみに登録されている場合、そのアクセスタイプでそのPLMNにEmergency Registeredとみなされる。
+Emergency Registered: A UE is considered Emergency Registered over an Access Type in a PLMN when registered for emergency services only over this Access Type in this PLMN.
+
+Endpoint Address: IPアドレスまたはFQDNの形式のアドレスで、NFサービスプロデューサーのNFサービス（すなわち、サービス操作を呼び出すため）にアクセスするために使用されるターゲットURIのホスト/オーソリティ部分を決定するために使用される。このターゲットURIは、NFサービスプロデューサーのNFサービス（すなわち、サービス操作を呼び出すため）にアクセスするために、またはNFサービスコンシューマーへの通知のために使用される。
+Endpoint Address: An address in the format of an IP address or FQDN, which is used to determine the host/authority part of the target URI. This Target URI is used to access an NF service (i.e. to invoke service operations) of an NF service producer or for notifications to an NF service consumer.
+
+En-gNB: TS 37.340 [31]で定義されている通り。
+En-gNB: as defined in TS 37.340 [31]. 
+
+Expected UE Behaviour: 外部のパーティが5Gネットワーク機能に対して予想されるUEの振る舞いに関するパラメータをプロビジョニングすることを指す。詳細は5.20節を参照。
+Expected UE Behaviour: Set of parameters provisioned by an external party to 5G network functions on the foreseen or expected UE behaviour, see clause 5.20. 
+
+Fixed Network Residential Gateway: Fixed Network RG (FN-RG)は、N1シグナリングをサポートせず、5GCに対応していないRGである。
+Fixed Network Residential Gateway: A Fixed Network RG (FN-RG) is a RG that it does not support N1 signalling and it is not 5GC capable.
+
+Fixed Network Broadband Residential Gateway: Fixed Network RG (FN-BRG)は、BBF TR-124 [90]で規定されているFN-RGである。
+Fixed Network Broadband Residential Gateway: A Fixed Network RG (FN-BRG) is a FN-RG specified in BBF TR-124 [90].
+
+Fixed Network Cable Residential Gateway: Fixed Network Cable RG (FN-CRG)は、DOCSIS MULPI [89]で規定されているケーブルモデムを持つFN-RGである。
+Fixed Network Cable Residential Gateway: A Fixed Network Cable RG (FN-CRG) is a FN-RG with cable modem specified in DOCSIS MULPI [89].
+
+Forbidden Area: UEが通信を開始することが許されないエリアで、5.3.2.3節で規定されている。
+Forbidden Area: An area where the UE is not allowed to initiate communication as specified in clause 5.3.2.3.
+
+GBR QoS Flow: GBRリソースタイプまたは遅延重視のGBRリソースタイプを使用し、保証されたフロービットレートを必要とするQoSフロー。
+GBR QoS Flow: A QoS Flow using the GBR resource type or the Delay-critical GBR resource type and requiring guaranteed flow bit rate.
+
+Group ID for Network Selection (GIN): SNPN選択時に、Default Credentials ServerまたはCredentials Holderをサポートする優先されるSNPNを選択する可能性を高めるために使用される識別子。
+Group ID for Network Selection (GIN): An identifier used during SNPN selection to enhance the likelihood of selecting a preferred SNPN that supports a Default Credentials Server or a Credentials Holder.
+
+(g)PTP-based Time Distribution: (g)PTPドメイン内のエンティティ間でタイミングを分配する方法で、GM（GMが5GS外部の場合）または5GS（5GSが特定の(g)PTPドメインのGMとして動作する場合）が生成するPTPメッセージを使用する。5.27.1節で説明されているように、(g)PTPベースのタイムディストリビューションと5Gアクセス層ベースのタイムディストリビューションとの間の可能な依存関係がある。同期プロセスは5.27.1節で説明されており、IEEE Std 802.1AS [104]またはIEEE Std 1588 [126]の適用可能なプロファイルに従う。
+(g)PTP-based Time Distribution: a method to distribute timing among entities in a (g)PTP domain using PTP messages generated by a GM (in the case the GM is external to 5GS) or by 5GS (in the case the 5GS acts as a GM for a given (g)PTP domain). Possible dependencies between (g)PTP-based Time Distribution and 5G Access Stratum-based Time Distribution are described in clause 5.27.1. The synchronization process is described in clause 5.27.1 and follows the applicable profiles of IEEE Std 802.1AS [104] or IEEE Std 1588 [126].
+
+Home Network Public Key Identifier: SUPIの保護とSUCIの復号化に使用される公開/秘密鍵ペアを示すために使用される識別子で、TS 23.003 [19]で規定されている。
+Home Network Public Key Identifier: An identifier used to indicate which public/private key pair is used for SUPI protection and de-concealment of the SUCI as specified in TS 23.003 [19].
+
+IAB-donor: 統合アクセスとバックホール（IAB）機能をサポートし、IABノードにコアネットワークへの接続を提供するNG-RANノードである。TS 38.401 [42]で定義されているIABのためのCU/DUアーキテクチャのCU機能をサポートする。
+IAB-donor: This is a NG-RAN node that supports Integrated access and backhaul (IAB) feature and provides connection to the core network to IAB-nodes. It supports the CU function of the CU/DU architecture for IAB defined in TS 38.401 [42].
+
 4.2 Architecture reference model
 4.2.1 General
 この仕様書は、5Gシステムのアーキテクチャについて説明しています。5Gアーキテクチャはサービスベースとして定義され、ネットワーク機能間の相互作用は2つの方法で表現されます。
