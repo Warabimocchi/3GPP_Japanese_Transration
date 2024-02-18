@@ -174,15 +174,30 @@ Protocol in Professional Broadcast Applications".
 [146] IETF RFC 8415: "Dynamic Host Configuration Protocol for IPv6 (DHCPv6)".
 [147] 3GPP TS 23.289: "Mission Critical services over 5G System; Stage 2".
 
-4.2.1
+4.2 Architecture reference model
+4.2.1 General
 この仕様書は、5Gシステムのアーキテクチャについて説明しています。5Gアーキテクチャはサービスベースとして定義され、ネットワーク機能間の相互作用は2つの方法で表現されます。
+This specification describes the architecture for the 5G System. The 5G architecture is defined as service-based and the interaction between network functions is represented in two ways.
 
-	・サービスベースの表現では、制御プレーン内のネットワーク機能（例：AMF）が、他の認可されたネットワーク機能に自身のサービスにアクセスすることを可能にします。この表現には、必要に応じて点対点の参照点も含まれます。
-	・参照点表現では、ネットワーク機能内のNFサービス間の相互作用を、任意の2つのネットワーク機能（例：AMFとSMF）間の点対点の参照点（例：N11）で表現します。サービスベースのインターフェースは、4.2.6節に記載されています。参照点は、4.2.7節に記載されています。 5GC制御プレーン内のネットワーク機能は、相互作用にサービスベースのインターフェースのみを使用しなければなりません（shall only use）。 注 1：このリリースの仕様では、1つのNF内のNFサービス間の相互作用は規定されていません。 NFとNFサービスは、直接通信と呼ばれる直接通信、またはSCP経由の間接通信と呼ばれる間接通信のいずれかで通信できます。通信オプションの詳細については、付録Eおよび6.3.1節と7.1.2節の条項を参照してください。 4節のアーキテクチャの説明に加えて、以下の分野は他の仕様書で詳しく説明されています。
-	・NG-RANアーキテクチャは、TS 38.300 [27]およびTS 38.401 [42]で説明されています。
-	・セキュリティアーキテクチャは、TS 33.501 [29]およびTS 33.535 [124]で説明されています。
-	・課金アーキテクチャは、TS 32.240 [41]で説明されています。
-	・5Gメディアストリーミングアーキテクチャは、TS 26.501 [135]で説明されています。 注 2：4.2.2節に記載されているNFは、以下の条項または上記の仕様書で説明されています。
+	- サービスベースの表現では、制御プレーン内のネットワーク機能（例：AMF）が、他の認可されたネットワーク機能に自身のサービスにアクセスすることを可能にします。この表現には、必要に応じて点対点の参照点も含まれます。
+	- A service-based representation, where network functions (e.g. AMF) within the Control Plane enables other authorized network functions to access their services. This representation also includes point-to-point reference points where necessary. 
+	- 点表現では、ネットワーク機能内のNFサービス間の相互作用を、任意の2つのネットワーク機能（例：AMFとSMF）間の点対点の参照点（例：N11）で表現します。サービスベースのインターフェースは、4.2.6節に記載されています。参照点は、4.2.7節に記載されています。 5GC制御プレーン内のネットワーク機能は、相互作用にサービスベースのインターフェースのみを使用しなければなりません（shall only use）。 注 1：このリリースの仕様では、1つのNF内のNFサービス間の相互作用は規定されていません。 NFとNFサービスは、直接通信と呼ばれる直接通信、またはSCP経由の間接通信と呼ばれる間接通信のいずれかで通信できます。通信オプションの詳細については、付録Eおよび6.3.1節と7.1.2節の条項を参照してください。 
+	- A reference point representation, shows the interaction exist between the NF services in the network functions described by point-to-point reference point (e.g. N11) between any two network functions (e.g. AMF and SMF). Service-based interfaces are listed in clause 4.2.6. Reference points are listed in clause 4.2.7.
+
+	4節のアーキテクチャの説明に加えて、以下の分野は他の仕様書で詳しく説明されています。
+	In addition to the architecture descriptions in clause 4, the following areas are further described in other specifications:
+
+	- NG-RANアーキテクチャは、TS 38.300 [27]およびTS 38.401 [42]で説明されています。
+	- NG-RAN architecture is described in TS 38.300 [27] and TS 38.401 [42]
+	- セキュリティアーキテクチャは、TS 33.501 [29]およびTS 33.535 [124]で説明されています。
+	- Security architecture is described in TS 33.501 [29] and TS 33.535 [124]. 
+	- 課金アーキテクチャは、TS 32.240 [41]で説明されています。
+	- Charging architecture is described in TS 32.240 [41].
+	- 5Gメディアストリーミングアーキテクチャは、TS 26.501 [135]で説明されています。
+	- 5G Media streaming architecture is described in TS 26.501 [135].
+
+	注2 : 4.2.2節に記載されているNFは、以下の条項または上記の仕様書で説明されています。
+	NOTE 2: The NFs listed in clause 4.2.2 are described in the following clauses or in the specifications above.
 
 4.2.2
 5Gシステムのアーキテクチャは、以下のネットワーク機能（NF）で構成されています。
