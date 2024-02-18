@@ -231,7 +231,35 @@ access network using 5GS credentials without registration to 5GS.
 Access Traffic Steering: アクセストラフィックステアリング：新しいデータフローのためにアクセスネットワークを選択し、このデータフローのトラフィックを選択されたアクセスネットワーク上で転送する手順です。アクセストラフィックステアリングは、3GPPアクセスと非3GPPアクセスの間で適用できます。
 Access Traffic Steering: The procedure that selects an access network for a new data flow and transfers the traffic of this data flow over the selected access network. Access traffic steering is applicable between one 3GPP access and one non-3GPP access.
 
+Access Traffic Switching: 進行中のデータフローの全てのトラフィックを、データフローの連続性を維持しながら別のアクセスネットワークに移動する手順。アクセストラフィックスイッチングは、3GPPアクセスと非3GPPアクセスの間で適用される。
+Access Traffic Switching: The procedure that moves all traffic of an ongoing data flow from one access network to another access network in a way that maintains the continuity of the data flow. Access traffic switching is applicable between one 3GPP access and one non-3GPP access.
 
+Access Traffic Splitting: データフローのトラフィックを複数のアクセスネットワークに分割する手順。トラフィックスプリッティングがデータフローに適用されると、データフローの一部のトラフィックは一方のアクセスを経由して、同じデータフローの別の一部のトラフィックは別のアクセスを経由して転送される。アクセストラフィックスプリッティングは、3GPPアクセスと非3GPPアクセスの間で適用される。
+Access Traffic Splitting: The procedure that splits the traffic of a data flow across multiple access networks. When traffic splitting is applied to a data flow, some traffic of the data flow is transferred via one access and some other traffic of the same data flow is transferred via another access. Access traffic splitting is applicable between one 3GPP access and one non-3GPP access.
+
+Allowed NSSAI: UEが現在の登録エリアでサービングPLMNで使用できるS-NSSAIの値を示す。
+Allowed NSSAI: Indicating the S-NSSAIs values the UE could use in the Serving PLMN in the current Registration Area.
+
+Allowed Area: UEが通信を開始できるエリアで、5.3.2.3節で規定されている。
+Allowed Area: Area where the UE is allowed to initiate communication as specified in clause 5.3.2.3.
+
+AMF Region: AMF Regionは、1つまたは複数のAMF Setで構成される。
+AMF Region: An AMF Region consists of one or multiple AMF Sets. 
+
+AMF Set: AMF Setは、特定のエリアとネットワークスライスをサービスするいくつかのAMFで構成される。AMF SetはAMF Region内で一意であり、同じネットワークスライスをサポートするAMFで構成される。AMF Regionごとに複数のAMF Setが定義される場合がある。同じAMF Set内のAMFインスタンスは地理的に分散しているが、同じコンテキストデータにアクセスできる。
+AMF Set: An AMF Set consists of some AMFs that serve a given area and Network Slice(s). AMF Set is unique within an AMF Region and it comprises of AMFs that support the same Network Slice(s). Multiple AMF Sets may be defined per AMF Region. The AMF instances in the same AMF Set may be geographically distributed but have access to the same context data.
+
+Application Identifier: 特定のアプリケーショントラフィック検出ルールにマッピングできる識別子。
+Application Identifier: An identifier that can be mapped to a specific application traffic detection rule.
+
+AUSF Group ID: 特定のSUPIセットを管理する1つ以上のAUSFインスタンスを指す。AUSF Groupは1つまたは複数のAUSF Setで構成される。
+AUSF Group ID: This refers to one or more AUSF instances managing a specific set of SUPIs. An AUSF Group consists of one or multiple AUSF Sets.
+
+Binding Indication: NFサービスプロデューサがNFサービスコンシューマに対して、リクエストレスポンスや通知に含める情報で、ターゲットNF/NFサービスの選択/再選択が可能な範囲を伝えるもの、またはNFサービスコンシューマがリクエストやサブスクリプションに含める情報で、通知ターゲットの選択/再選択や同じデータコンテキストのためにNFコンシューマが提供する他のサービスの選択が可能な範囲を伝えるもの。6.3.1.0節を参照。
+Binding Indication: Information included by a NF service producer to a NF service consumer in request responses or notifications to convey the scope within which selection/reselection of target NF/NF Services may be performed, or information included by the NF service consumer in requests or subscriptions to convey the scope within which selection/reselection of notification targets or the selection of other service(s) that the NF consumer produces for the same data context may be performed. See clause 6.3.1.0.
+
+BSF Group ID: 特定のSUPIセットまたはGPSIセットを管理する1つ以上のBSFインスタンスを指す。BSF Groupは1つまたは複数のBSF Setで構成される。
+BSF Group ID: This refers to one or more BSF instances managing a specific set of SUPIs or GPSIs. A BSF Group consists of one or multiple BSF Sets.
 
 4.2 Architecture reference model
 4.2.1 General
