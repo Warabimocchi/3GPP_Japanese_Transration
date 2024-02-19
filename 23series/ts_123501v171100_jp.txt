@@ -261,7 +261,7 @@ Binding Indication: Information included by a NF service producer to a NF servic
 BSF Group ID: 特定のSUPIセットまたはGPSIセットを管理する1つ以上のBSFインスタンスを指す。BSF Groupは1つまたは複数のBSF Setで構成される。
 BSF Group ID: This refers to one or more BSF instances managing a specific set of SUPIs or GPSIs. A BSF Group consists of one or multiple BSF Sets.
 
-Configured NSSAI: 1つ以上ウノPLMNに適用sれるUEにプロビジョニングされたNSSAI。
+Configured NSSAI: 1つ以上のPLMNに適用されるUEにプロビジョニングされたNSSAI。
 Configured NSSAI: NSSAI provisioned in the UE applicable to one or more PLMNs.
 
 CHF Group ID: 特定のSUPIの集合を管理する一つ以上のCHFインスタンスを指す。
