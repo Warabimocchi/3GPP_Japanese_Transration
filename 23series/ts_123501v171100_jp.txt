@@ -407,6 +407,86 @@ NF service instance: an identifiable instance of the NF service.
 NF service operation:NFサービスが構成される基本単位。
 An elementary unit a NF service is composed of.
 
+NF Service Set: 同じサービスタイプのNFサービスインスタンスのグループで、NFインスタンス内にあるもの。同じNFサービスセット内のNFサービスインスタンスは、同じコンテキストデータにアクセスできる。
+NF Service Set: A group of interchangeable NF service instances of the same service type within an NF instance. The NF service instances in the same NF Service Set have access to the same context data.
+
+NF Set: 同じタイプで、同じサービスと同じネットワークスライスをサポートするNFインスタンスのグループ。同じNFセット内のNFインスタンスは地理的に分散している可能性があるが、同じコンテキストデータにアクセスできる。
+NF Set: A group of interchangeable NF instances of the same type, supporting the same services and the same Network Slice(s). The NF instances in the same NF Set may be geographically distributed but have access to the same context data.
+
+NG-RAN: 5GCに接続するという共通の特徴を持ち、以下のオプションの一つ以上をサポートする無線アクセスネットワーク。
+NG-RAN: A radio access network that supports one or more of the following options with the common characteristics that it connects to 5GC:
+	1) スタンドアロンのNew Radio
+	1) Standalone New Radio.
+
+	2) New Radioがアンカーで、E-UTRAの拡張機能を持つもの。
+	2) New Radio is the anchor with E-UTRA extensions. 
+
+	3) スタンドアロンのE-UTRA。
+	3) Standalone E-UTRA. 
+
+	4) E-UTRAがアンカーで、New Radioの拡張機能を持つもの。 
+	4) E-UTRA is the anchor with New Radio extensions.
+
+Non-Allowed Area: UEが登録手続きを開始することが許可されているが、5.3.2.3節で指定されている他の通信はできないエリア。
+Non-Allowed Area: Area where the UE is allowed to initiate Registration procedure but no other communication as specified in clause 5.3.2.3.
+
+Non-Public Network: TS 22.261 [2]で定義されているものを参照。
+Non-Public Network: See definition in TS 22.261 [2].
+
+Non-Seamless Non-3GPP offload: N3IWF/TNGFやUPFを経由せずに、非3GPPアクセスでユーザプレーンのトラフィックをオフロードすること。
+Non-Seamless Non-3GPP offload: The offload of user plane traffic via non-3GPP access without traversing either N3IWF/TNGF or UPF.
+
+Non-Seamless WLAN offload: 非3GPPアクセスネットワークがWLANの場合のNon-Seamless Non-3GPP offload。
+Non-Seamless WLAN offload: Non-Seamless Non-3GPP offload when the non-3GPP access network is WLAN.
+
+Onboarding Network: 登録済みのUEにリモートプロビジョニングを可能にするPLMN、またはOnboarding SNPNのいずれか。
+Onboarding Network: Either a PLMN enabling Remote Provisioning for a registered UE, or an Onboarding SNPN.
+
+Onboarding Standalone Non-Public Network: TS 23.502 3の4.2.2.2.4節で規定されているように、Onboarding用に登録されたUEにリモートプロビジョニングを可能にするSNPN。
+Onboarding Standalone Non-Public Network: An SNPN providing Onboarding access and enabling Remote Provisioning for a UE registered for Onboarding as specified in clause 4.2.2.2.4 of TS 23.502 [3]. 
+
+PCF Group ID: 特定のSUPIの集合を管理する1つ以上のPCFインスタンスを指す。PCFグループは、1つまたは複数のPCFセットで構成される。
+PCF Group ID: This refers to one or more PCF instances managing a specific set of SUPIs. A PCF Group consists of one or multiple PCF Sets.
+
+Pending NSSAI: ネットワークスライス固有の認証および認可手順が保留中であるS-NSSAIを示す、サービングPLMNによって登録手順中に提供されるNSSAI。
+Pending NSSAI: NSSAI provided by the Serving PLMN during a Registration procedure, indicating the S-NSSAI(s) for which the network slice-specific authentication and authorization procedure is pending.
+
+PDU Connectivity Service: UEとデータネットワークとの間でPDUの交換を提供するサービス。
+PDU Connectivity Service: A service that provides exchange of PDUs between a UE and a Data Network.
+
+PDU Session: PDU接続サービスを提供するUEとデータネットワークとの間の関連付け。
+PDU Session: Association between the UE and a Data Network that provides a PDU connectivity service.
+
+PDU Session Type: PDUセッションのタイプで、IPv4、IPv6、IPv4v6、Ethernet、Unstructuredのいずれかである
+PDU Session Type: The type of PDU Session which can be IPv4, IPv6, IPv4v6, Ethernet or Unstructured.
+
+Periodic Registration Update: 5.3.2節で規定されているように、定期的な登録タイマーの有効期限でのUEの再登録。
+Periodic Registration Update: UE re-registration at expiry of periodic registration timer as specified in clause 5.3.2.
+
+PLMN with Disaster Condition: 災害状況が適用されるPLMN。
+PLMN with Disaster Condition: A PLMN to which a Disaster Condition applies.
+
+Pre-configured 5QI: ANと5GCに設定された事前定義されたQoS特性で、非標準化された5QI値で参照される。
+-configured 5QI: Pre-defined QoS characteristics configured in the AN and 5GC and referenced via a non-standardized 5QI value.
+
+Private communication: TS 22.261[2] で定義されている通り。
+Private communication: See definition in TS 22.261 [2].
+
+Provisioning Server: SNPNアクセスを可能にするために、UEにネットワーク認証情報や他のデータをプロビジョニングするエンティティ。
+Provisioning Server: Entity that provisions network credentials and other data in the UE to enable SNPN access.
+
+PTP domain: IEEE Std 1588 [126]で定義されている通り。
+PTP domain: As defined in IEEE Std 1588 [126].
+
+Public network integrated NPN: PLMNの支援で展開された非公開ネットワーク。
+Public network integrated NPN: A non-public network deployed with the support of a PLMN.
+
+(Radio) Access Network: 5Gアクセスネットワークを参照。
+(Radio) Access Network: See 5G Access Network.
+
+RAT type: 3GPPアクセスと非3GPPアクセスの両方で、アクセスネットワークで使用される伝送技術を識別するもので、例えば、NR、NB-IOT、Untrusted Non-3GPP、Trusted Non-3GPP、Trusted IEEE 802.11 Non-3GPPアクセス、Wireline、Wireline-Cable、Wireline-BBFなどがある。
+RAT type: Identifies the transmission technology used in the access network for both 3GPP accesses and non-3GPP Accesses, for example, NR, NB-IOT, Untrusted Non-3GPP, Trusted Non-3GPP, Trusted IEEE 802.11 Non-3GPP access, Wireline, Wireline-Cable, Wireline-BBF, etc.
+
 4.2 Architecture reference model
 4.2.1 General
 この仕様書は、5Gシステムのアーキテクチャについて説明しています。5Gアーキテクチャはサービスベースとして定義され、ネットワーク機能間の相互作用は2つの方法で表現されます。
