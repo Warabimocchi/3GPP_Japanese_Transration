@@ -213,7 +213,7 @@ access network using 5GS credentials without registration to 5GS.
 5G QoS Flow or QoS Flow: 5GシステムにおけるQoS転送処理の最も細かい粒度です。同じ5G QoSフローにマッピングされたすべてのトラフィックは同じ転送処理を受けます（例：スケジューリングポリシー、キュー管理ポリシー、レートシェーピングポリシー、RLC設定など）。異なるQoS転送処理を提供するには、別の5G QoSフローが必要です。
 5G QoS Flow or QoS Flow: The finest granularity for QoS forwarding treatment in the 5G System. All traffic mapped to the same 5G QoS Flow receive the same forwarding treatment (e.g. scheduling policy, queue management policy, rate shaping policy, RLC configuration, etc.). Providing different QoS forwarding treatment requires separate 5G QoS Flow.
 
-5G QoS Identifier: 5G QoSフローに提供される特定のQoS転送動作（例：パケットロス率、パケット遅延予算）を参照するために使用されるスカラーです。これは、QoS転送処理を制御するノード固有のパラメータを参照する5QIによってアクセスネットワークで実装される場合があります（例：スケジューリングの重み、受入閾値、キュー管理閾値、リンク層プロトコル設定など）。
+5G QoS Identifier: 5G QoSフローに提供される特定のQoS転送動作（例：パケットロス率、パケット遅延量）を参照するために使用されるスカラーです。これは、QoS転送処理を制御するノード固有のパラメータを参照する5QIによってアクセスネットワークで実装される場合があります（例：スケジューリングの重み、受入閾値、キュー管理閾値、リンク層プロトコル設定など）。
 5G QoS Identifier: A scalar that is used as a reference to a specific QoS forwarding behaviour (e.g. packet loss rate, packet delay budget) to be provided to a 5G QoS Flow. This may be implemented in the access network by the 5QI referencing node specific parameters that control the QoS forwarding treatment (e.g. scheduling weights, admission thresholds, queue management thresholds, link layer protocol configuration, etc.).
 
 5G System: 5Gアクセスネットワーク（AN）、5Gコアネットワーク、UEから構成される3GPPシステムです。
