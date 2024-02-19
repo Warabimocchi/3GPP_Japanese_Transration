@@ -333,6 +333,80 @@ Home Network Public Key Identifier: An identifier used to indicate which public/
 IAB-donor: 統合アクセスとバックホール（IAB）機能をサポートし、IABノードにコアネットワークへの接続を提供するNG-RANノードである。TS 38.401 [42]で定義されているIABのためのCU/DUアーキテクチャのCU機能をサポートする。
 IAB-donor: This is a NG-RAN node that supports Integrated access and backhaul (IAB) feature and provides connection to the core network to IAB-nodes. It supports the CU function of the CU/DU architecture for IAB defined in TS 38.401 [42].
 
+IAB-node: NR Uu バックホールリンクを介したNRアクセストラフィックの無線インバンドおよびアウトバンドリレーをサポートするリレーノードです。TS 38.401 [42]で定義されたIABのCU/DUアーキテクチャのUE機能とDU機能をサポートします。
+IAB-node: A relay node that supports wireless in-band and out-of-band relaying of NR access traffic via NR Uu backhaul links. It supports the UE function and the DU function of the CU/DU architecture for IAB defined in TS 38.401 [42].
+
+Indirect Communication: SCPを介したNFまたはNFサービス間の通信を指します
+Indirect Communication: This refers to the communication between NFs or NF services via an SCP.
+
+Initial Registr5ation: 節5.3.2で指定されたRM-DEREGISTERED状態のUE登録。
+Initial Registration: UE registration in RM-DEREGISTERED state as specified in clause 5.3.2.
+
+Intermediate SMF (I-SMF): UEがUPF(s) が異なるSMFサービスエリアに属するため、元のSMFによって制御できないエリアに位置しているときにPDUセッションをサポートするために挿入されるSMF。
+Intermediate SMF (I-SMF): An SMF that is inserted to support a PDU session as the UE is located in an area which cannot be controlled by the original SMF because the UPF(s) belong to a different SMF Service Area. 
+
+Local Area Data Network: UEが特定の場所でのみアクセス可能で、特定のDNNへの接続性を提供し、UEに利用可能性を提供するDN。
+Local Area Data Network: a DN that is accessible by the UE only in specific locations, that provides connectivity to a specific DNN, and whose availability is provided to the UE.
+
+Local Break Out (LBO): PDUセッションアンカーとその制御SMFがサービングPLMN（VPLMN）に位置しているローミングシナリオのPDUセッション。
+Local Break Out (LBO): Roaming scenario for a PDU Session where the PDU Session Anchor and its controlling SMF are located in the serving PLMN (VPLMN). 
+
+LTE-M: コアネットワークでのみ使用される3GPP RATタイプ識別子であり、E-UTRA RATタイプのサブタイプであり、コアネットワークでUEがカテゴリMを示すときにE-UTRAを識別するために定義されています。
+LTE-M: a 3GPP RAT type Identifier used in the Core Network only, which is a sub-type of E-UTRA RAT type, and defined to identify in the Core Network the E-UTRA when used by a UE indicating Category M.
+
+MA PDU Session: 一度に1つのアクセスネットワーク、または同時に1つの3GPPアクセスネットワークと1つの非3GPPアクセスネットワークを使用できるPDU接続サービスを提供するPDUセッション。
+MA PDU Session: A PDU Session that provides a PDU connectivity service, which can use one access network at a time, or simultaneously one 3GPP access network and one non-3GPP access network.
+
+Mobility Pattern: 節5.3.2.4で指定されたAMF内のUE移動パラメータを決定するネットワークの概念。
+Mobility Pattern: Network concept of determining within the AMF the UE mobility parameters as specified in clause 5.3.2.4
+
+Mobility Registration Update: 節5.3.2で指定された新しいTAに入るときのUE再登録。
+Mobility Registration Update: UE re-registration when entering new TA outside the TAI List as specified in clause 5.3.2.
+
+MPS-subscribed UE: MPSサブスクリプションを持つUSIMを持つUE。
+MPS-subscribed UE: A UE having a USIM with MPS subscription.
+
+Multi-USIM UE: 複数のUSIMを持つUEで、3GPPアクセスを介して少なくとも各USIMに対してPLMNとの別々の登録状態を維持でき、節5.38で説明されている1つ以上の機能をサポートします。
+Multi-USIM UE: A UE with multiple USIMs, capable of maintaining a separate registration state with a PLMN for each USIM at least over 3GPP Access and supporting one or more of the features described in clause 5.38.
+
+NB-IoT UE Priority: NB-IoTを介してアクセスするさまざまなUE間を優先するためにNG-RANによって使用される数値。
+NB-IoT UE Priority: Numerical value used by the NG-RAN to prioritise between different UEs accessing via NB-IoT.
+
+NGAP UE association: 5G-ANノードとAMF間の論理的なUE関連付け。
+NGAP UE association: The logical per UE association between a 5G-AN node and an AMF.
+
+NGAP UE-TNLA-binding: 特定のUEのNGAP UE関連付けと特定のTNL関連付けとのバインディング。
+Network Function: A 3GPP adopted or 3GPP defined processing function in a network, which has defined functional behaviour and 3GPP defined interfaces.
+	注釈1: ネットワーク機能は、専用のハードウェア上のネットワーク要素として、専用のハードウェア上で動作するソフトウェアインスタンスとして、または適切なプラットフォーム上でインスタンス化された仮想化機能として実装することができます。例えば、クラウドインフラストラクチャ上でインスタンス化された仮想化機能として実装することができます。
+	NOTE 1: A network function can be implemented either as a network element on a dedicated hardware, as a software instance running on a dedicated hardware, or as a virtualised function instantiated on an appropriate platform, e.g. on a cloud infrastructure.
+
+Network Instance: ドメインを識別する情報。UPFによるトラフィック検出とルーティングに使用されます。
+Network Instance: Information identifying a domain. Used by the UPF for traffic detection and routing.
+
+Network Slice: 特定のネットワーク機能とネットワーク特性を提供する論理ネットワーク。
+Network Slice: A logical network that provides specific network capabilities and network characteristics.
+
+Network Slice instance: デプロイされたネットワークスライスを形成するネットワーク機能インスタンスと必要なリソース（例えば、計算、ストレージ、ネットワークリソース）のセット。
+Network Slice instance: A set of Network Function instances and the required resources (e.g. compute, storage and networking resources) which form a deployed Network Slice. 
+
+Non-GBR QoS Flow: 非GBRリソースタイプを使用し、保証されたフロービットレートを必要としないQoSフロー。
+Non-GBR QoS Flow: A QoS Flow using the Non-GBR resource type and not requiring guaranteed flow bit rate.
+
+NSI ID: 同じネットワークスライスの複数のネットワークスライスインスタンスがデプロイされ、5GC内でそれらを区別する必要がある場合、ネットワークスライスインスタンスのコアネットワーク部分を識別するための識別子。
+NSI ID: an identifier for identifying the Core Network part of a Network Slice instance when multiple Network Slice instances of the same Network Slice are deployed, and there is a need to differentiate between them in the 5GC.
+
+NF instance: NFの識別可能なインスタンス。
+NF instance: an identifiable instance of the NF.
+
+NF service: サービスベースのインターフェースを通じてNFによって公開され、他の認証済みNFによって消費される機能。
+NF service: a functionality exposed by a NF through a service-based interface and consumed by other authorized NFs.
+
+NF service instance: NFサービスの識別可能なインスタンス。
+NF service instance: an identifiable instance of the NF service.
+
+NF service operation:NFサービスが構成される基本単位。
+An elementary unit a NF service is composed of.
+
 4.2 Architecture reference model
 4.2.1 General
 この仕様書は、5Gシステムのアーキテクチャについて説明しています。5Gアーキテクチャはサービスベースとして定義され、ネットワーク機能間の相互作用は2つの方法で表現されます。
