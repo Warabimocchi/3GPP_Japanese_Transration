@@ -336,10 +336,10 @@ IAB-donor: This is a NG-RAN node that supports Integrated access and backhaul (I
 IAB-node: NR Uu バックホールリンクを介したNRアクセストラフィックの無線インバンドおよびアウトバンドリレーをサポートするリレーノードです。TS 38.401 [42]で定義されたIABのCU/DUアーキテクチャのUE機能とDU機能をサポートします。
 IAB-node: A relay node that supports wireless in-band and out-of-band relaying of NR access traffic via NR Uu backhaul links. It supports the UE function and the DU function of the CU/DU architecture for IAB defined in TS 38.401 [42].
 
-Indirect Communication: SCPを介したNFまたはNFサービス間の通信を指します
+Indirect Communication: SCPを介したNFまたはNFサービス間の通信を指します。
 Indirect Communication: This refers to the communication between NFs or NF services via an SCP.
 
-Initial Registr5ation: 節5.3.2で指定されたRM-DEREGISTERED状態のUE登録。
+Initial Registration: 節5.3.2で指定されたRM-DEREGISTERED状態のUE登録。
 Initial Registration: UE registration in RM-DEREGISTERED state as specified in clause 5.3.2.
 
 Intermediate SMF (I-SMF): UEがUPF(s) が異なるSMFサービスエリアに属するため、元のSMFによって制御できないエリアに位置しているときにPDUセッションをサポートするために挿入されるSMF。
@@ -360,7 +360,7 @@ MA PDU Session: A PDU Session that provides a PDU connectivity service, which ca
 Mobility Pattern: 節5.3.2.4で指定されたAMF内のUE移動パラメータを決定するネットワークの概念。
 Mobility Pattern: Network concept of determining within the AMF the UE mobility parameters as specified in clause 5.3.2.4
 
-Mobility Registration Update: 節5.3.2で指定された新しいTAに入るときのUE再登録。
+Mobility Registration Update: 節5.3.2で指定されているようにTAIリストの範囲外にているようにTAIリストの範囲外にある新しいTAに入るときのUE再登録。
 Mobility Registration Update: UE re-registration when entering new TA outside the TAI List as specified in clause 5.3.2.
 
 MPS-subscribed UE: MPSサブスクリプションを持つUSIMを持つUE。
