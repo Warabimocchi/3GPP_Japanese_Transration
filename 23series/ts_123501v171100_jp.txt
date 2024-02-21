@@ -515,10 +515,7 @@ Service based interface: あるNFによって提供/公開される一連のサ�
 Service based interface: It represents how a set of services is provided/exposed by a given NF.
 
 Service Continuity: IPアドレスやアンカリングポイントが変更される場合を含め、サービスの途切れないユーザー体験。
-<<<<<<< HEAD
-Service Continuity: The uninterrupted user experience of a service, including the cases where the IP address and/or anchoring point change. 
-=======
->>>>>>> edit23.501
+Service Continuity: The uninterrupted user experience of a service, including the cases where the IP address and/or anchoring point change.
 
 Service Data Flow Filter: サービスデータフローを構成する（IPまたはイーサネットの）パケットフローの1つ以上を識別するために使用される、パケットフローヘッダパラメータの値/範囲の集合。
 Service Data Flow Filter: A set of packet flow header parameter values/ranges used to identify one or more of the (IP or Ethernet) packet flows constituting a Service Data Flow.
@@ -540,10 +537,7 @@ Stand-alone Non-Public Network: PLMNが提供するネットワーク機能に�
 Stand-alone Non-Public Network: A non-public network not relying on network functions provided by a PLMN
 
 Subscribed S-NSSAI: UEがPLMNで使用することが契約されているS-NSSAIで、加入者情報に基づくもの。
-<<<<<<< HEAD
 Subscribed S-NSSAI: S-NSSAI based on subscriber information, which a UE is subscribed to use in a PLMN 
-=======
->>>>>>> edit23.501
 
 Subscription Owner Standalone Non-Public Network: 加入者の所有するスタンドアロン非公開ネットワークで、オンボーディング手順中にプロビジョニングサーバーを介してUEに加入者データを提供するもの。
 Subscription Owner Standalone Non-Public Network: A Standalone Non-Public Network owning the subscription of a UE and providing subscription data to the UE via a Provisioning Server during the onboarding procedure.
@@ -551,23 +545,17 @@ Subscription Owner Standalone Non-Public Network: A Standalone Non-Public Networ
 LSurvival Time: 通信サービスを利用するアプリケーションが予想されるメッセージなしに継続できる時間。
 Survival Time: The time that an application consuming a communication service may continue without an anticipated message.
 
-<<<<<<< HEAD
 	注釈2：TS 22.261[2]の第3.1節から引用したものである。
 	NOTE 2: Taken from clause 3.1 of TS 22.261[2].
-=======
->>>>>>> edit23.501
 
 Target NSSAI: このNSSAIに含まれるS-NSSAIによって識別されるネットワークスライスをサポートするセルにUEを誘導しようとするNG-RANに、サービングPLMNが提供するNSSAI。詳細は5.3.4.3.3節を参照。
 Target NSSAI: NSSAI provided by the Serving PLMN to the NG-RAN to cause the NG-RAN to attempt to steer the UE to a cell supporting the Network Slices identified by the S-NSSAIs in this NSSAI. See clause 5.3.4.3.3 for more details.
 
 Time Sensitive Communication (TSC): 決定論的な通信（最大遅延を保証する通信）や高信頼性・高可用性の等時通信をサポートする通信サービス。遅延、ロス、信頼性などのQoS特性を持つパケット転送を提供するもので、エンドシステムや中継/送信ノードが厳密に同期されているかどうかは問わない。
-<<<<<<< HEAD
 Time Sensitive Communication (TSC): A communication service that supports deterministic communication (i.e. which ensures a maximum delay) and/or isochronous communication with high reliability and availability. It is about providing packet transport with QoS characteristics such as bounds on latency, loss, and reliability, where end systems and relay/transmit nodes may or may not be strictly synchronized.
 
 TSN working domain: TSNネットワークで特定のタスクや作業機能に協力する局所的なデバイスの集合の同期ドメインで、IEEE 802.1AS[104]で定義されているgPTPドメインに対応する。
 TSN working domain: Synchronization domain for a localized set of devices collaborating on a specific task or work function in a TSN network, corresponding to a gPTP domain defined in IEEE 802.1AS[104].
-=======
->>>>>>> edit23.501
 
 UDM Group ID: 特定のSUPIの集合を管理する一つまたは複数のUDMインスタンスを指す。UDMグループは一つまたは複数のUDMセットで構成される。
 UDM Group ID: This refers to one or more UDM instances managing a specific set of SUPIs. An UDM Group consists of one or multiple UDM Sets.
@@ -575,6 +563,9 @@ UDM Group ID: This refers to one or more UDM instances managing a specific set o
 UDR Group ID: これは、特定のSUPIの集合を管理する1つ以上のUDRインスタンスを指します。UDRグループは、1つまたは複数のUDRセットで構成されます。
 UDR Group ID: This refers to one or more UDR instances managing a specific set of SUPIs. An UDR Group consists of one or multiple UDR Sets
 
+
+
+4.2 Architec
 
 4.2.1 General
 この仕様書は、5Gシステムのアーキテクチャについて説明しています。5Gアーキテクチャはサービスベースとして定義され、ネットワーク機能間の相互作用は2つの方法で表現されます。
