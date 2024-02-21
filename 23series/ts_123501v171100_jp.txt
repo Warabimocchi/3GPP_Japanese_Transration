@@ -598,7 +598,6 @@ Wireline Access Gateway Function (W-AGF): The Wireline Access Gateway Function (
 
 3.2 Abbreviations
 
-
 4.2 Architec
 4.2.1 General
 この仕様書は、5Gシステムのアーキテクチャについて説明しています。5Gアーキテクチャはサービスベースとして定義され、ネットワーク機能間の相互作用は2つの方法で表現されます。
