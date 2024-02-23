@@ -346,8 +346,8 @@ Intermediate SMF (I-SMF): UEがUPF(s) が異なるSMFサービスエリアに属
 Intermediate SMF (I-SMF): An SMF that is inserted to support a PDU session as the UE is located in an area which cannot be controlled by the original SMF because the UPF(s) belong to a different SMF Service Area. 
 
 Local Area Data Network: UEが特定の場所でのみアクセス可能で、特定のDNNへの接続性を提供し、UEに利用可能性を提供するDN。
-Local Area Data Network: a DN that is accessible by the UE only in specific locations, that provides connectivity to a specific DNN, and whose availability is provided to the UE.
-
+Local Area Data Network: a DN that is accessible by the UE only in specific locations, that provides connectivity to a specific DNN, and whose availability is provided to the UE.git
+git
 Local Break Out (LBO): PDUセッションアンカーとその制御SMFがサービングPLMN（VPLMN）に位置しているローミングシナリオのPDUセッション。
 Local Break Out (LBO): Roaming scenario for a PDU Session where the PDU Session Anchor and its controlling SMF are located in the serving PLMN (VPLMN). 
 
@@ -563,6 +563,42 @@ UDM Group ID: This refers to one or more UDM instances managing a specific set o
 UDR Group ID: これは、特定のSUPIの集合を管理する1つ以上のUDRインスタンスを指します。UDRグループは、1つまたは複数のUDRセットで構成されます。
 UDR Group ID: This refers to one or more UDR instances managing a specific set of SUPIs. An UDR Group consists of one or multiple UDR Sets
 
+UE-DS-TT Residence Time: UEとDS-TTがパケットを転送するのにかかる時間で、DL方向ではUEの入口とDS-TTポートの間、UL方向ではDS-TTポートとUEの出口の間の時間を指します。UE-DS-TT Residence Timeは、PDUセッション確立時にUEからネットワークに提供されます。
+UE-DS-TT Residence Time: The time taken within the UE and DS-TT to forward a packet, i.e. between the ingress of the UE and the DS-TT port in the DL direction, or between the DS-TT port and the egress of the UE in the UL direction. UE-DS-TT Residence Time is provided at the time of PDU Session Establishment by the UE to the network.
+
+	注釈3：UE-DS-TT滞在時間は、上りと下りのトラフィックに対して同じであり、すべてのQoSフローに適用されます。
+	NOTE 3: UE-DS-TT Residence Time is the same for uplink and downlink traffic and applies to all QoS Flows.
+
+UPF Service Area: UPFと関連付けられたPDUセッションを、新たなUPFを追加したり、既存のUPFを削除したり再割り当てしたりすることなく、®ANとUPFの間のN3インターフェースを介して®ANノードで提供できる、1つ以上のTAで構成されるエリア
+UPF Service Area: An area consisting of one or more TA(s) within which PDU Session associated with the UPF can be served by (R)AN nodes via a N3 interface between the (R)AN and the UPF without need to add a new UPF in between or to remove/re-allocate the UPF.
+
+Uplink Classifier: SMFから提供されたフィルタルールに基づいて、アップリンクトラフィックをデータネットワークに向けて分岐させることを目的としたUPFの機能。
+Uplink Classifier: UPF functionality that aims at diverting Uplink traffic, based on filter rules provided by SMF,towards Data Network.
+
+WB-E-UTRA: RANでは、WB-E-UTRAはNB-IoTを除くE-UTRAの一部です。コアネットワークでは、WB-E-UTRAはLTE-Mも除きます。
+WB-E-UTRA: In the RAN, WB-E-UTRA is the part of E-UTRA that excludes NB-IoT. In the Core Network, WB-E-UTRA also excludes LTE-M. 
+
+Wireline 5G Access Network: ワイヤライン5Gアクセスネットワーク（W-5GAN）は、N2およびN3参照点を介して5GCに接続するワイヤラインANです。W-5GANは、W-5GBANまたはW-5GCANのいずれかになります。
+Wireline 5G Access Network: The Wireline 5G Access Network (W-5GAN) is a wireline AN that connects to a 5GC via N2 and N3 reference points. The W-5GAN can be either a W-5GBAN or W-5GCAN. 
+
+Wireline 5G Cable Access Network: ワイヤライン5Gケーブルアクセスネットワーク（W-5GCAN）は、CableLabsで定義されたアクセスネットワークです。
+Wireline 5G Cable Access Network: The Wireline 5G Cable Access Network (W-5GCAN) is the Access Network defined in CableLabs.
+
+Wireline BBF Access Network: ワイヤライン5G BBFアクセスネットワーク（W-5GBAN）は、BBFで定義されたアクセスネットワークです。
+Wireline BBF Access Network: The Wireline 5G BBF Access Network (W-5GBAN) is the Access Network defined in BBF.
+
+Wireline Access Gateway Function (W-AGF): ワイヤラインアクセスゲートウェイ機能（W-AGF）は、W-5GANにおけるネットワーク機能であり、5G-RGおよびFN-RGに5Gコアへの接続性を提供します。
+Wireline Access Gateway Function (W-AGF): The Wireline Access Gateway Function (W-AGF) is a Network function in W-5GAN that provides connectivity to the 5G Core to 5G-RG and FN-RG.
+
+
+	注釈3: もしAUSF/PCF/UDR/UDMグループが複数のAUSF/PCF/UDR/UDMセットから構成されている場合、 異なるセットからのAUSF/PCF/UDR/UDMインスタンスが同じUEに対応するために選択される可能性があります。
+	NOTE 4: If one AUSF/PCF/UDR/UDM group consists of multiple AUSF/PCF/UDR/UDM Sets, AUSF/PCF/UDR/UDM instance from different Set may be selected to serve the same UE.
+
+	異なるセット間で共有されない一時的なデータは失われる可能性があります。例えば、あるUDMインスタンスに保存されているイベントの購読情報は、別のセットからの別のUDMインスタンスが選択され、UDMセット間でデータが共有されない場合に失われます。
+	The temporary data which is not shared across different Sets may be lost, e.g. the event subscriptions stored at one UDM instance are lost if another UDM instance from different Set is selected and no data shared across the UDM Sets.
+
+
+4.2 Architec
 
 
 4.2 Architec
