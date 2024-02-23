@@ -598,6 +598,94 @@ Wireline Access Gateway Function (W-AGF): The Wireline Access Gateway Function (
 	The temporary data which is not shared across different Sets may be lost, e.g. the event subscriptions stored at one UDM instance are lost if another UDM instance from different Set is selected and no data shared across the UDM Sets.
 
 
+3.2 Abbreviations
+本文書の目的のために、TR 21.905 [1] および以下に示す略語が適用されます。
+For the purposes of the present document, the abbreviations given in TR 21.905 [1] and the following apply.
+本文書で定義された略語は、TR 21.905 [1] において同じ略語が定義されている場合でも、その定義よりも優先されます。
+An abbreviation defined in the present document takes precedence over the definition of the same abbreviation, if any, in TR 21.905 [1].
+
+5GC               5G Core Network
+5G                DDNMF 5G Direct Discovery Name Management Function
+5G LAN            5G Local Area Network
+5GS               5G System
+5G-AN             5G Access Network
+5G-AN             PDB 5G Access Network Packet Delay Budget
+5G-EIR            5G-Equipment Identity Register
+5G-GUTI           5G Globally Unique Temporary Identifier
+5G-BRG            5G Broadband Residential Gateway
+5G-CRG            5G Cable Residential Gateway
+5G GM             5G Grand Master
+5G NSWO           5G Non-Seamless WLAN offload
+5G-RG             5G Residential Gateway
+5G-S-TMSI         5G S-Temporary Mobile Subscription Identifier
+5G VN             5G Virtual Network
+5QI               5G QoS Identifier
+ADRF              Analytics Data Repository Function
+AF                Application Function
+AKMA              Authentication and Key Management for Applications
+AnLF              Analytics Logical Function
+AMF               Access and Mobility Management Function
+AS                Access Stratum
+ATSSS             Access Traffic Steering, Switching, Splitting
+ATSSS-LL          ATSSS Low-Layer
+AUSF              Authentication Server Function
+BMCA              Best Master Clock Algorithm
+BSF               Binding Support Function
+CAG               Closed Access Group
+CAPIF             Common API Framework for 3GPP northbound APIs
+CH                Credentials Holder
+CHF               Charging Function
+CN PDB            Core Network Packet Delay Budget
+CP                Control Plane
+DAPS              Dual Active Protocol Stacks
+DCCF              Data Collection Coordination Function
+DCS               Default Credentials Server
+DL                Downlink
+DN                Data Network
+DNAI              DN Access Identifier
+DNN               Data Network Name
+DRX               Discontinuous Reception
+DS-TT             Device-side TSN translator
+EAC               Early Admission Control
+ePDG              evolved Packet Data Gateway
+EBI               EPS Bearer Identity
+EUI               Extended Unique Identifier
+FAR               Forwarding Action Rule
+FN-BRG            Fixed Network Broadband RG
+FN-CRG            Fixed Network Cable RG
+FN-RG             Fixed Network RG
+FQDN              Fully Qualified Domain Name
+GBA               Generic Bootstrapping Architecture
+GEO               Geostationary Orbit
+GFBR              Guaranteed Flow Bit Rate
+GIN Group ID      for Network Selection
+GMLC              Gateway Mobile Location Centre
+GPSI              Generic Public Subscription Identifier
+GUAMI             Globally Unique AMF Identifier
+HMTC              High-Performance Machine-Type Communications
+HR                Home Routed (roaming)
+IAB               Integrated access and backhaul
+IMEI/TAC          IMEI Type Allocation Code
+IPUPS             Inter PLMN UP Security
+I-SMF             Intermediate SMF
+I-UPF             Intermediate UPF
+LADN              Local Area Data Network
+LBO               Local Break Out (roaming)
+LEO               Low Earth Orbit
+LMF               Location Management Function
+LoA               Level of Automation
+LPP               LTE Positioning Protocol
+LRF               Location Retrieval Function
+MBS               Multicast/Broadcast Service
+MBSF              Multicast/Broadcast Service Function
+MBSTF             Multicast/Broadcast Service Transport Function
+MB-SMF            Multicast/Broadcast Session Management Function
+MB-UPF            Multicast/Broadcast User Plane Function
+MEO               Medium Earth Orbit
+
+
+
+
 4.2 Architec
 
 4.2.1 General
