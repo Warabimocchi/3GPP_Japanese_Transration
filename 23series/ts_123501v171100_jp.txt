@@ -682,6 +682,68 @@ MBSTF             Multicast/Broadcast Service Transport Function
 MB-SMF            Multicast/Broadcast Session Management Function
 MB-UPF            Multicast/Broadcast User Plane Function
 MEO               Medium Earth Orbit
+MFAF              Messaging Framework Adaptor Function 
+MCX               Mission Critical Service 
+MDBV              Maximum Data Burst Volume 
+MFBR              Maximum Flow Bit Rate 
+MICO              Mobile Initiated Connection Only 
+MINT              Minimization of Service Interruption 
+ML                Machine Learning 
+MPS               Multimedia Priority Service 
+MPTCP             Multi-Path TCP Protocol 
+MTLF              Model Training Logical Function 
+N3IWF             Non-3GPP InterWorking Function 
+N5CW              Non-5G-Capable over WLAN 
+NAI               Network Access Identifier 
+NEF               Network Exposure Function 
+NF                Network Function 
+NGAP              Next Generation Application Protocol 
+NID               Network identifier 
+NPN               Non-Public Network 
+NR                New Radio 
+NRF               Network Repository Function 
+NSAC              Network Slice Admission Control 
+NSACF             Network Slice Admission Control Function 
+NSAG              Network Slice AS Group 
+NSI ID            Network Slice Instance Identifier 
+NSSAA             Network Slice-Specific Authentication and Authorization 
+NSSAAF            Network Slice-specific and SNPN Authentication and Authorization Function 
+NSSAI             Network Slice Selection Assistance Information 
+NSSF              Network Slice Selection Function 
+NSSP              Network Slice Selection Policy 
+NSSRG             Network Slice Simultaneous Registration Group 
+NSWO              Non-Seamless WLAN offload 
+NSWOF             Non-Seamless WLAN offload Function 
+NW-TT             Network-side TSN translator 
+NWDAF             Network Data Analytics Function 
+ONN               Onboarding Network 
+ON-SNPN           Onboarding Standalone Non-Public Network 
+PCF               Policy Control Function 
+PDB               Packet Delay Budget 
+PDR               Packet Detection Rule 
+PDU               Protocol Data Unit
+PEI               Permanent Equipment Identifier 
+PER               Packet Error Rate 
+PFD               Packet Flow Description 
+PNI-NPN           Public Network Integrated Non-Public Network 
+PPD               Paging Policy Differentiation 
+PPF               Paging Proceed Flag 
+PPI               Paging Policy Indicator 
+PSA               PDU Session Anchor 
+PTP               Precision Time Protocol 
+PVS               Provisioning Server 
+QFI               QoS Flow Identifier 
+QoE               Quality of Experience 
+RACS              Radio Capabilities Signalling optimisation 
+(R)AN             (Radio) Access Network 
+RG                Residential Gateway 
+RIM               Remote Interference Management 
+RQA               Reflective QoS Attribute 
+RQI               Reflective QoS Indication 
+RSN               Redundancy Sequence Number 
+SA                NR Standalone New Radio 
+SBA               Service Based Architecture 
+SBI               Service Based Interface 
 
 
 
