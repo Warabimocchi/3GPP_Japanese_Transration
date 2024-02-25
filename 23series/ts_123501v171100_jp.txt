@@ -853,10 +853,13 @@ This specification describes the architecture for the 5G System. The 5G architec
 
 	- NG-RANアーキテクチャは、TS 38.300 [27]およびTS 38.401 [42]で説明されています。
 	- NG-RAN architecture is described in TS 38.300 [27] and TS 38.401 [42]
+	
 	- セキュリティアーキテクチャは、TS 33.501 [29]およびTS 33.535 [124]で説明されています。
 	- Security architecture is described in TS 33.501 [29] and TS 33.535 [124]. 
+
 	- 課金アーキテクチャは、TS 32.240 [41]で説明されています。
 	- Charging architecture is described in TS 32.240 [41].
+
 	- 5Gメディアストリーミングアーキテクチャは、TS 26.501 [135]で説明されています。
 	- 5G Media streaming architecture is described in TS 26.501 [135].
 
@@ -865,40 +868,145 @@ This specification describes the architecture for the 5G System. The 5G architec
 
 4.2.2
 5Gシステムのアーキテクチャは、以下のネットワーク機能（NF）で構成されています。
+The 5G System architecture consists of the following network functions (NF):
+
 	- Authentication Server Function (AUSF).
+
 	- Access and Mobility Management Function (AMF).
+
 	- Data Network (DN), e.g. operator services, Internet access or 3rd party services.
+
 	- Unstructured Data Storage Function (UDSF).
+
 	- Network Exposure Function (NEF).
+
 	- Network Repository Function (NRF).
+
 	- Network Slice Admission Control Function (NSACF).
+	
 	- Network Slice-specific and SNPN Authentication and Authorization Function (NSSAAF).
+
 	- Network Slice Selection Function (NSSF).
+
 	- Policy Control Function (PCF).
+
 	- Session Management Function (SMF).
+
 	- Unified Data Management (UDM).
+
 	- Unified Data Repository (UDR).
+
 	- User Plane Function (UPF).
+
 	- UE radio Capability Management Function (UCMF).
+
 	- Application Function (AF).
+
 	- User Equipment (UE).
+
 	- (Radio) Access Network ((R)AN).
+
 	- 5G-Equipment Identity Register (5G-EIR).
+
 	- Network Data Analytics Function (NWDAF).
+
 	- CHarging Function (CHF).
+
 	- Time Sensitive Networking AF (TSN AF).
+
 	- Time Sensitive Communication and Time Synchronization Function (TSCTSF).
+
 	- Data Collection Coordination Function (DCCF).
+
 	- Analytics Data Repository Function (ADRF).
+
 	- Messaging Framework Adaptor Function (MFAF).
+
 	- Non-Seamless WLAN Offload Function (NSWOF).
+
 	注：DCCFおよび/またはADRFが提供する機能は、NWDAFによってもホストされることができます。
+	NOTE: The functionalities provided by DCCF and/or ADRF can also be hosted by an NWDAF.
+
 	- Edge Application Server Discovery Function (EASDF).
+
 	5Gシステムのアーキテクチャには、以下のネットワークエンティティも含まれます。
+	The 5G System architecture also comprises the following network entities:
+
 	- Service Communication Proxy (SCP).
+
 	- Security Edge Protection Proxy (SEPP). 
+
 	これらのネットワーク機能とエンティティの機能的な説明は、第6節で規定されています。
+	The functional descriptions of these Network Functions and entities are specified in clause 6.
+
 	- Non-3GPP InterWorking Function (N3IWF).
+
 	- Trusted Non-3GPP Gateway Function (TNGF).
+
 	- Wireline Access Gateway Function (W-AGF).
+
 	- Trusted WLAN Interworking Function (TWIF).
+
+4.2.3 Non-roaming reference architecture
+図4.2.3-1は、非ローミング時の参照アーキテクチャを示しています。
+Figure 4.2.3-1 depicts the non-roaming reference architecture.
+制御プレーン内では、サービスベースのインターフェースが使用されます。
+Service-based interfaces are used within the Control Plane.
+
+	注：SCPが展開されている場合、付録Eで説明されているように、NFとNFサービスの間で間接的な通信に使うことができます。SCP自体はサービスを公開しません。
+	NOTE: If an SCP is deployed it can be used for indirect communication between NFs and NF services as described in Annex E. SCP does not expose services itself.
+
+図4.2.3-2は、非ローミングの場合の5Gシステムのアーキテクチャを、様々なネットワーク機能がどのように相互作用するかを示す参照点表現を用いて示しています。
+Figure 4.2.3-2 depicts the 5G System architecture in the non-roaming case, using the reference point representation showing how various network functions interact with each other. 
+
+	注釈1：N9、N14は他の図には示されていませんが、他のシナリオでも適用される可能性があります。
+	NOTE 1: N9, N14 are not shown in all other figures however they may also be applicable for other scenarios.
+
+	注釈2：ポイント・ツー・ポイントの図の明瞭さのために、UDSF、NEF、NRFは示されていません。しかし、示されているすべてのネットワーク機能は、必要に応じてUDSF、UDR、NEF、NRFとやりとりできます。
+	NOTE 2: For the sake of clarity of the point-to-point diagrams, the UDSF, NEF and NRF have not been depicted. However, all depicted Network Functions can interact with the UDSF, UDR, NEF and NRF as necessary.
+
+	注釈3：UDMはサブスクリプションデータと認証データを利用し、PCFはUDRに保存されている可能性のあるポリシーデータを利用します（4.2.5項を参照）。
+	NOTE 3: The UDM uses subscription data and authentication data and the PCF uses policy data that may be stored in UDR (refer to clause 4.2.5).
+
+	注釈4：明瞭さのために、UDRと他のNFとの接続、例えばPCFなどは、ポイント・ツー・ポイントとサービスベースのアーキテクチャ図には示されていません。データストレージアーキテクチャに関する詳細は、4.2.5項を参照してください。
+	NOTE 4: For clarity, the UDR and its connections with other NFs, e.g. PCF, are not depicted in the point-to-point and service-based architecture diagrams. For more information on data storage architectures refer to clause 4.2.5.
+
+	注釈5: 明確さのために、NWDAF(s)、DCCF、MFAF、ADRFと他のNFとの接続は、ポイント・ツー・ポイントとサービスベースのアーキテクチャ図には示されていません。ネットワークデータ分析アーキテクチャに関する詳細は、TS 23.288 [86]を参照してください。
+	NOTE 5: For clarity, the NWDAF(s), DCCF, MFAF and ADRF and their connections with other NFs, are not depicted in the point-to-point and service-based architecture diagrams. For more information on network data analytics architecture refer to TS 23.288 [86].
+
+	注釈6：明瞭さのために、5G DDNMFと他のNFとの接続、例えばUDM、PCFなどは、ポイント・ツー・ポイントとサービスベースのアーキテクチャ図には示されていません。ProSeアーキテクチャに関する詳細は、TS 23.304 [128]を参照してください。
+	NOTE 6: For clarity, the 5G DDNMF and its connections with other NFs, e.g. UDM, PCF are not depicted in the point-to-point and service-based architecture diagrams. For more information on ProSe architecture refer to TS 23.304 [128].
+
+	注釈7：明瞭さのために、TSCTSFと他のNFとの接続、例えばPCF、NEF、UDRなどは、ポイント・ツー・ポイントとサービスベースのアーキテクチャ図には示されていません。TSCアーキテクチャに関する詳細は、4.4.8項を参照してください。
+	NOTE 7: For clarity, the TSCTSF and its connections with other NFs, e.g. PCF, NEF, UDR are not depicted in the point-to-point and service-based architecture diagrams. For more information on TSC architecture refer to clause 4.4.8.
+
+	注釈8：QoSモニタリング情報の公開のために、UPF（L-PSA UPF）とローカルNEF/ローカルAFとの間のNupfインターフェースを通じた直接のやりとりがサポートされます。TS 23.548 [130]を参照してください。
+	NOTE 8: For exposure of QoS monitoring information, direct interaction between UPF (L-PSA UPF) and Local NEF/Local AF can be supported via the Nupf interface, as described in TS 23.548 [130].
+
+	注釈9：明瞭さのために、EASDFとSMFとの接続は、ポイント・ツー・ポイントとサービスベースのアーキテクチャ図には示されていません。エッジコンピューティングアーキテクチャに関する詳細は、TS 23.548 [130]を参照してください。
+	NOTE 9: For clarity, the EASDF and its connections with SMF is not depicted in the point-to-point and servicebased architecture diagrams. For more information on edge computing architecture refer to TS 23.548 [130].
+
+
+図4.2.3-3は、参照点表現を用いて、複数のPDUセッションを使用して2つの（例えばローカルとセントラルの）データネットワークに同時にアクセスするUEの非ローミングアーキテクチャを示しています。
+Figure 4.2.3-3 depicts the non-roaming architecture for UEs concurrently accessing two (e.g. local and central) data networks using multiple PDU Sessions, using the reference point representation.
+
+この図は、2つの異なるPDUセッションに対して2つのSMFが選択される複数のPDUセッションのアーキテクチャを示しています。
+This figure shows the architecture for multiple PDU Sessions where two SMFs are selected for the two different PDU Sessions.
+
+ただし、各SMFは、PDUセッション内でローカルとセントラルの両方のUPFを制御する能力を持つ場合もあります。
+However, each SMF may also have the capability to control both a local and a central UPF within a PDU Session.
+
+
+図4.2.3-4は、参照点表現を用いて、単一のPDUセッション内で2つの（例えばローカルとセントラルの）データネットワークへの同時アクセスが提供される場合の非ローミングアーキテクチャを示しています。
+Figure 4.2.3-4 depicts the non-roaming architecture in the case of concurrent access to two (e.g. local and central) data networks is provided within a single PDU Session, using the reference point representation.
+
+
+図4.2.3-5は、参照点表現を用いて、ネットワーク露出機能のための非ローミングアーキテクチャを示しています。
+Figure 4.2.3-5 depicts the non-roaming architecture for Network Exposure Function, using reference point representation.
+
+	注1：図4.2.3-5では、NEFの信頼ドメインは、TS 23.682 [36]で定義されているSCEFの信頼ドメインと同じです。
+	NOTE 1: In Figure 4.2.3-5, Trust domain for NEF is same as Trust domain for SCEF as defined in TS 23.682 [36].
+
+	注2：図4.2.3-5では、3GPPインタフェースは、NEFと5GCネットワーク機能との間の南向きインタフェースを表します。例えば、NEFとSMFとの間のN29インタフェース、NEFとPCFとの間のN30インタフェースなどです。簡潔さのために、NEFからのすべての南向きインタフェースは示されていません。
+	NOTE 2: In Figure 4.2.3-5, 3GPP Interface represents southbound interfaces between NEF and 5GC Network Functions e.g. N29 interface between NEF and SMF, N30 interface between NEF and PCF, etc. All southbound interfaces from NEF are not shown for the sake of simplicity.
+
