@@ -850,10 +850,13 @@ This specification describes the architecture for the 5G System. The 5G architec
 
 	- NG-RANアーキテクチャは、TS 38.300 [27]およびTS 38.401 [42]で説明されています。
 	- NG-RAN architecture is described in TS 38.300 [27] and TS 38.401 [42]
+	
 	- セキュリティアーキテクチャは、TS 33.501 [29]およびTS 33.535 [124]で説明されています。
 	- Security architecture is described in TS 33.501 [29] and TS 33.535 [124]. 
+
 	- 課金アーキテクチャは、TS 32.240 [41]で説明されています。
 	- Charging architecture is described in TS 32.240 [41].
+
 	- 5Gメディアストリーミングアーキテクチャは、TS 26.501 [135]で説明されています。
 	- 5G Media streaming architecture is described in TS 26.501 [135].
 
@@ -862,40 +865,83 @@ This specification describes the architecture for the 5G System. The 5G architec
 
 4.2.2
 5Gシステムのアーキテクチャは、以下のネットワーク機能（NF）で構成されています。
+The 5G System architecture consists of the following network functions (NF):
+
 	- Authentication Server Function (AUSF).
+
 	- Access and Mobility Management Function (AMF).
+
 	- Data Network (DN), e.g. operator services, Internet access or 3rd party services.
+
 	- Unstructured Data Storage Function (UDSF).
+
 	- Network Exposure Function (NEF).
+
 	- Network Repository Function (NRF).
+
 	- Network Slice Admission Control Function (NSACF).
+	
 	- Network Slice-specific and SNPN Authentication and Authorization Function (NSSAAF).
+
 	- Network Slice Selection Function (NSSF).
+
 	- Policy Control Function (PCF).
+
 	- Session Management Function (SMF).
+
 	- Unified Data Management (UDM).
+
 	- Unified Data Repository (UDR).
+
 	- User Plane Function (UPF).
+
 	- UE radio Capability Management Function (UCMF).
+
 	- Application Function (AF).
+
 	- User Equipment (UE).
+
 	- (Radio) Access Network ((R)AN).
+
 	- 5G-Equipment Identity Register (5G-EIR).
+
 	- Network Data Analytics Function (NWDAF).
+
 	- CHarging Function (CHF).
+
 	- Time Sensitive Networking AF (TSN AF).
+
 	- Time Sensitive Communication and Time Synchronization Function (TSCTSF).
+
 	- Data Collection Coordination Function (DCCF).
+
 	- Analytics Data Repository Function (ADRF).
+
 	- Messaging Framework Adaptor Function (MFAF).
+
 	- Non-Seamless WLAN Offload Function (NSWOF).
+
 	注：DCCFおよび/またはADRFが提供する機能は、NWDAFによってもホストされることができます。
+	NOTE: The functionalities provided by DCCF and/or ADRF can also be hosted by an NWDAF.
+
 	- Edge Application Server Discovery Function (EASDF).
+
 	5Gシステムのアーキテクチャには、以下のネットワークエンティティも含まれます。
+	The 5G System architecture also comprises the following network entities:
+
 	- Service Communication Proxy (SCP).
+
 	- Security Edge Protection Proxy (SEPP). 
+
 	これらのネットワーク機能とエンティティの機能的な説明は、第6節で規定されています。
+	The functional descriptions of these Network Functions and entities are specified in clause 6.
+
 	- Non-3GPP InterWorking Function (N3IWF).
+
 	- Trusted Non-3GPP Gateway Function (TNGF).
+
 	- Wireline Access Gateway Function (W-AGF).
+
 	- Trusted WLAN Interworking Function (TWIF).
+
+
