@@ -744,8 +744,54 @@ RSN               Redundancy Sequence Number
 SA                NR Standalone New Radio 
 SBA               Service Based Architecture 
 SBI               Service Based Interface 
-
-
+SCP               Service Communication Proxy 
+SD                Slice Differentiator 
+SEAF              Security Anchor Functionality 
+SEPP              Security Edge Protection Proxy 
+SMF               Session Management Function 
+SMSF              Short Message Service Function 
+SN                Sequence Number 
+SNPN              Stand-alone Non-Public Network 
+S-NSSAI           Single Network Slice Selection Assistance Information 
+SO-SNPN           Subscription Owner Standalone Non-Public Network 
+SSC               Session and Service Continuity 
+SSCMSP            Session and Service Continuity Mode Selection Policy 
+SST               Slice/Service Type 
+SUCI              Subscription Concealed Identifier 
+SUPI              Subscription Permanent Identifier 
+SV                Software Version 
+TA                Tracking Area 
+TAI               Tracking Area Identity 
+TNAN              Trusted Non-3GPP Access Network 
+TNAP              Trusted Non-3GPP Access Point 
+TNGF              Trusted Non-3GPP Gateway Function 
+TNL               Transport Network Layer 
+TNLA              Transport Network Layer Association 
+TSC               Time Sensitive Communication 
+TSCAI             TSC Assistance Information 
+TSCTSF            Time Sensitive Communication and Time Synchronization Function 
+TSN               Time Sensitive Networking 
+TSN GM            TSN Grand Master 
+TSP               Traffic Steering Policy 
+TT                TSN Translator 
+TWIF              Trusted WLAN Interworking Function 
+UAS               NF Uncrewed Aerial System Network Function 
+UCMF              UE radio Capability Management Function 
+UDM               Unified Data Management 
+UDR               Unified Data Repository 
+UDSF              Unstructured Data Storage Function 
+UL                Uplink 
+UL CL             Uplink Classifier 
+UPF               User Plane Function 
+URLLC             Ultra Reliable Low Latency Communication 
+URRP-AMF          UE Reachability Request Parameter for AMF 
+URSP              UE Route Selection Policy 
+VID               VLAN Identifier 
+VLAN              Virtual Local Area Network 
+W-5GAN            Wireline 5G Access Network 
+W-5GBAN           Wireline BBF Access Network 
+W-5GCAN           Wireline 5G Cable Access Network 
+W-AGF             Wireline Access Gateway Function
 
 
 4.2 Architec
