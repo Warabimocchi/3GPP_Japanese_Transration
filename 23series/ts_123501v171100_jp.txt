@@ -1160,3 +1160,14 @@ In addition, it shall be possible to access operator specific data sets by the N
 
 4.2.5a Radio Capabilities Signalling optimisation
 
+Figure 4.2.5a-1は、AMFとUCMFの参照点とインターフェースを示しています。
+Figure 4.2.5a-1 depicts the AMF to UCMF reference point and interface.
+
+Figure 4.2.5a-2は、ローミングアーキテクチャでの無線機能シグナリング最適化に関連するAMFとUCMFのインターフェースを示しています。
+Figure 4.2.5a-2 depicts the related interfaces in AMF and UCMF for the Radio Capabilities Signalling optimisation in the roaming architecture.
+
+	注釈: VPLMNのAF（すなわち、VPLMN NEFと関係を持つもの）は、VPLMN UCMFにメーカー割り当てのUE無線機能IDを提供するものです。RACSは、サービングPLMNのみの機能です（UE HPLMNとのローミング契約に特別なサポートは必要ありません）。
+	NOTE: The AF in the VPLMN (i.e. the one having a relationship with the VPLMN NEF) is the one which provisions Manufacturer Assigned UE radio capability IDs in the VPLMN UCMF. RACS is a serving PLMN only feature (it requires no specific support in the roaming agreement with the UE HPLMN to operate).
+
+
+4.2.6 Service-based interfaces
