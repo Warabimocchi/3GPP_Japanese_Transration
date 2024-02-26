@@ -1076,3 +1076,87 @@ Figure 4.2.4-3 depicts the home routed roaming architecture where the two UPFs p
 
 IPUPS機能は、5.8.2.14節とTS 33.501 [29]で規定されています。
 The IPUPS functionality is specified in clause 5.8.2.14 and TS 33.501 [29].
+
+
+4.2.5 Data Storage architectures
+
+図4.2.5-1に示されているように、5Gシステムのアーキテクチャでは、任意のNFがUDSFに対して非構造化データ（例えばUEコンテキスト）を格納・取得することができます。
+As depicted in Figure 4.2.5-1, the 5G System architecture allows any NF to store and retrieve its unstructured data into/from a UDSF (e.g. UE contexts).
+
+UDSFは、ネットワーク機能が所属するPLMNに属します。
+The UDSF belongs to the same PLMN where the network function is located.
+
+CP NFはそれぞれの非構造化データを格納するためにUDSFを共有することも、それぞれ独自のUDSFを持つこともできます（例えば、UDSFはそれぞれのNFに近い場所に配置されるかもしれません）。
+CP NFs may share a UDSF for storing their respective unstructured data or may each have their own UDSF (e.g. a UDSF may be located close to the respective NF).
+
+	注釈1: 本仕様書での構造化データとは、その構造が3GPP仕様書で定義されているデータを指します。
+	NOTE 1: Structured data in this specification refers to data for which the structure is defined in 3GPP specifications.
+	非構造化データとは、その構造が3GPP仕様書で定義されていないデータを指します。
+	Unstructured data refers to data for which the structure is not defined in 3GPP specifications. 
+
+	注釈2: 3GPPは、N18/Nudsfインターフェースを（参照によって可能ならば）規定する予定です。
+	NOTE 2: 3GPP will specify (possibly by referencing) the N18/Nudsf interface.
+
+図4.2.5-2に示すように、5Gシステムのアーキテクチャでは、UDM、PCF、NEFがUDRにデータを格納できます。これには、UDMとPCFによるサブスクリプションデータとポリシーデータ、NEFによるエクスポージャー用の構造化データとアプリケーションデータ（アプリケーション検出のためのパケットフロー記述（PFD）や複数のUEに対するAF要求情報を含む）が含まれます。
+As depicted in Figure 4.2.5-2, the 5G System architecture allows the UDM, PCF and NEF to store data in the UDR,including subscription data and policy data by UDM and PCF, structured data for exposure and application data (including Packet Flow Descriptions (PFDs) for application detection, AF request information for multiple UEs) by the NEF.
+
+UDRは各PLMNに展開でき、以下のように異なる機能を提供できます。
+UDR can be deployed in each PLMN and it can serve different functions as follows:
+
+	- NEFがアクセスするUDRは、NEFが所在するPLMNと同じPLMNに属します。
+	- UDR accessed by the NEF belongs to the same PLMN where the NEF is located.
+
+	- UDMがスプリットアーキテクチャをサポートしている場合、UDMがアクセスするUDRは、UDMが所在するPLMNと同じPLMNに属します。
+	- UDR accessed by the UDM belongs to the same PLMN where the UDM is located if UDM supports a split architecture.
+
+	- PCFがアクセスするUDRは、PCFが所在するPLMNと同じPLMNに属します。 
+	- UDR accessed by the PCF belongs to the same PLMN where the PCF is located.
+
+
+	 注釈3：各PLMNに展開されたUDRは、ローミング加入者のアプリケーションデータを格納できます。
+	 NOTE 3: The UDR deployed in each PLMN can store application data for roaming subscribers.
+
+	 注釈4：ネットワークには複数のUDRが展開されており、それぞれが異なるデータセットやサブセット（例えば、加入データ、加入ポリシーデータ、露出用データ、アプリケーションデータなど）を収容したり、異なるNFのセットに対応したりできます。
+	 NOTE 4: There can be multiple UDRs deployed in the network, each of which can accommodate different data sets or subsets, (e.g. subscription data, subscription policy data, data for exposure, application data) and/or serve different sets of NFs. 
+	 UDRが単一のNFに対応し、そのデータを保存し、そのNFと統合できるような展開も可能です。
+	 Deployments where a UDR serves a single NF and stores its data, and, thus, can be integrated with this NF, can be possible.
+
+	 注釈5：図4.2.5-2に示されたUDRの内部構造は、情報提供のために示されているだけです。
+	 The internal structure of the UDR in figure 4.2.5-2 is shown for information only.
+
+Nudrインターフェースは、UDM、PCF、NEFなどのネットワーク機能（NFサービスコンシューマ）が、UDRに格納された特定のデータセットにアクセスし、UDR内の関連データの変更を通知するために読み取り、更新（追加、変更を含む）、削除、および購読するために定義されています。
+The Nudr interface is defined for the network functions (i.e. NF Service Consumers), such as UDM, PCF and NEF, to access a particular set of the data stored and to read, update (including add, modify), delete, and subscribe to otification of relevant data changes in the UDR.
+
+Nudrを介してUDRにアクセスする各NFサービスコンシューマは、変更する権限のあるデータのみを追加、変更、更新、または削除できるようにする必要があります。この権限は、UDRによって、データセットとNFサービスコンシューマの単位で、および可能であれば、UE、サブスクリプションの粒度ごとに行われます。
+Each NF Service Consumer accessing the UDR, via Nudr, shall be able to add, modify, update or delete only the data it is authorised to change. This authorisation shall be performed by the UDR on a per data set and NF service consumer basis and potentially on a per UE, subscription granularity.
+
+UDRのデータセットは、Nudrを介して各NFサービスコンシューマに公開され、保存される以下のデータが標準化されます。
+The following data in the UDR sets exposed via Nudr to the respective NF service consumer and stored shall be standardized:
+
+	- サブスクリプションデータ
+	- Subscription Data,
+
+	- ポリシーデータ
+	- Policy Data,
+
+	- 構造化されたエクスポージャ用データ
+	- Structured Data for exposure,
+
+	- アプリケーションデータ：アプリケーション検出と複数のUEに対するAF要求情報のためのパケットフロー記述（PFD）（5.6.7節で定義）
+	- Application data: Packet Flow Descriptions (PFDs) for application detection and AF request information for multiple UEs, as defined in clause 5.6.7.
+
+サービスベースのNudrインターフェースは、データセットによって公開される3GPPで定義された情報要素の内容と形式/エンコーディングを定義します。 
+The service based Nudr interface defines the content and format/encoding of the 3GPP defined information elements exposed by the data sets.
+
+また、NFサービスコンシューマは、UDRからオペレータ固有のデータセットにアクセスするだけでなく、各データセットに対するオペレータ固有のデータにもアクセスできるようにする必要があります。
+In addition, it shall be possible to access operator specific data sets by the NF Service Consumers from the UDR as well as operator specific data for each data set.
+
+	注釈6: オペレータ固有のデータとオペレータ固有のデータセットの内容と形式/エンコーディングは標準化の対象ではありません。
+	NOTE 6: The content and format/encoding of operator specific data and operator specific data sets are not subject to standardization.
+
+	注釈7: UDRに格納される異なるデータの構成は標準化されるべきではありません。
+	NOTE 7: The organization of the different data stored in the UDR is not to be standardized.
+
+
+4.2.5a Radio Capabilities Signalling optimisation
+
