@@ -1010,3 +1010,72 @@ Figure 4.2.3-5 depicts the non-roaming architecture for Network Exposure Functio
 	注2：図4.2.3-5では、3GPPインタフェースは、NEFと5GCネットワーク機能との間の南向きインタフェースを表します。例えば、NEFとSMFとの間のN29インタフェース、NEFとPCFとの間のN30インタフェースなどです。簡潔さのために、NEFからのすべての南向きインタフェースは示されていません。
 	NOTE 2: In Figure 4.2.3-5, 3GPP Interface represents southbound interfaces between NEF and 5GC Network Functions e.g. N29 interface between NEF and SMF, N30 interface between NEF and PCF, etc. All southbound interfaces from NEF are not shown for the sake of simplicity.
 
+
+4.2.4 Roaming reference architectures
+
+図4.2.4-1は、制御プレーン内のサービスベースのインターフェースを用いたローカルブレークアウトを伴う5Gシステムのローミングアーキテクチャを示しています。
+Figure 4.2.4-1 depicts the 5G System roaming architecture with local breakout with service-based interfaces within the Control Plane.
+
+	注釈1: LBOアーキテクチャでは、VPLMNのPCFは、VPLMN経由で提供されるサービスのためにPCCルールを生成するためにAFと相互作用することができます。VPLMNのPCFは、HPLMNオペレータとのローミング契約に基づいてローカルに設定されたポリシーをPCCルール生成の入力として使用します。VPLMNのPCFは、HPLMNから加入者ポリシー情報にアクセスすることはできません。HPLMNのNSACFは、この仕様のリリースでは使用されません。
+	NOTE 1: In the LBO architecture. the PCF in the VPLMN may interact with the AF in order to generate PCC Rules for services delivered via the VPLMN, the PCF in the VPLMN uses locally configured policies according to the roaming agreement with the HPLMN operator as input for PCC Rule generation, the PCF in VPLMN has no access to subscriber policy information from the HPLMN, the NSACF in the HPLMN is not used in this Release of the specification.
+
+	注釈2: SCPは、VPLMN内、HPLMN内、またはVPLMNとHPLMNの両方内で、NFとNFサービス間の間接的な通信に使用できます。簡単のために、SCPはローミングアーキテクチャには示されていません。
+	NOTE 2: An SCP can be used for indirect communication between NFs and NF services within the VPLMN, within the HPLMN, or in within both VPLMN and HPLMN. For simplicity, the SCP is not shown in the roaming architecture.
+
+
+図4.2.4-3は、コントロールプレーン内でサービスベースのインターフェースを用いたホームルーティングシナリオの場合の5Gシステムのローミングアーキテクチャを示しています。
+Figure 4.2.4-3 depicts the 5G System roaming architecture in the case of home routed scenario with service-based interfaces within the Control Plane.
+
+	注釈3: SCPは、VPLMN内、HPLMN内、またはVPLMNとHPLMNの両方内で、NFとNFサービス間の間接的な通信に使用できます。簡単のために、SCPはローミングアーキテクチャには示されていません。
+	NOTE 3: An SCP can be used for indirect communication between NFs and NF services within the VPLMN, within the HPLMN, or in within both VPLMN and HPLMN. For simplicity, the SCP is not shown in the roaming architecture.
+
+	注釈4: ホームルーテッドシナリオのUPFは、IPUPS機能（5.8.2.14節を参照）をサポートするためにも使用
+	NOTE 4: UPFs in the home routed scenario can be used also to support the IPUPS functionality (see clause 5.8.2.14).
+
+
+図4.2.4-4は、参照点表現を用いて、ローカルブレークアウトシナリオの場合の5Gシステムのローミングアーキテクチャを示しています。
+Figure 4.2.4-4 depicts 5G System roaming architecture in the case of local break out scenario using the reference point representation.
+
+	注釈5: NRFは、参照点アーキテクチャ図には示されていません。NRFとNFインタフェースの詳細については、図4.2.4-7を参照してください。 注釈5：NRFは参照点アーキテクチャ図には示されていません。NRFとNFインタフェースの詳細は、図4.2.4-7をご覧ください。
+	NOTE 5: The NRF is not depicted in reference point architecture figures. Refer to Figure 4.2.4-7 for details on NRF and NF interfaces.
+
+	注釈6: For the sake of clarity, SEPPs are not depicted in the roaming reference point architecture figures. 注釈6：明確さのために、SEPPはローミング参照点アーキテクチャ図には示されていません。
+	NOTE 6: For the sake of clarity, SEPPs are not depicted in the roaming reference point architecture figures.
+
+次の図4.2.4-6は、参照点表現を用いて、ホームルーテッドシナリオの場合の5Gシステムローミングアーキテクチャを示しています。
+The following figure 4.2.4-6 depicts the 5G System roaming architecture in the case of home routed scenario using the reference point representation. 
+
+N38参照点は、同じVPLMN内のV-SMF間、あるいは異なるVPLMN内のV-SMF間（PLMN間の移動性を可能にするため）に存在することができる。
+The N38 references point can be between V-SMFs in the same VPLMN, or between V-SMFs in different VPLMNs (to enable inter-PLMN mobility).
+
+上記のローミングシナリオでは、各PLMNはプロキシ機能を実装して、PLMN間の相互接続を保護し、PLMN間のインターフェース上のトポロジーを隠す。
+For the roaming scenarios described above each PLMN implements proxy functionality to secure interconnection and hide topology on the inter-PLMN interfaces.
+
+	注釈7: 図4.2.4-7では、PLMNの境界の両側にあるSEPPは、明瞭さのために示されていません。
+	NOTE 7: For the sake of clarity, SEPPs on both sides of PLMN borders are not depicted in figure 4.2.4-7. 
+
+ホームルーティングローミングシナリオで、無効なインターPLMN N9トラフィックから自分のネットワークを保護するために、Inter PLMN UP Security (IPUPS)機能をサポートするUPFを自分のネットワークの境界に展開できる。
+Operators can deploy UPFs supporting the Inter PLMN UP Security (IPUPS) functionality at the border of their network to protect their network from invalid inter PLMN N9 traffic in home routed roaming scenarios.
+
+VPLMNとHPLMNでIPUPS機能をサポートするUPFは、それぞれそのPDUセッションのV-SMFとH-SMFによって制御される。
+The UPFs supporting the IPUPS functionality in VPLMN and HPLMN are controlled by the V-SMF and the H-SMF of that PDU Session respectively.
+
+IPUPS機能をサポートするUPFは、GTP-U N9トンネルを終了させる。
+A UPF supporting the IPUPS functionality terminates GTP-U N9 tunnels.
+
+SMFは、同じUPFでIPUPS機能と他のUP機能を一緒に有効化するか、またはUPパスにIPUPS機能のための別のUPFを挿入することができる（例えば、IPUPS機能のために専用に使用される場合など）。
+The SMF can activate the IPUPS functionality together with other UP functionality in the same UPF, or insert a separate UPF for the IPUPS functionality in the UP path (which e.g. may be dedicated to be used for IPUPS functionality).
+
+図4.2.4-9は、IPUPS機能のためにUPパスにUPFが挿入されたホームルーティングローミングアーキテクチャを示している。
+Figure 4.2.4-9 depicts the home routed roaming architecture where a UPF is inserted in the UP path for the IPUPS functionality.
+
+図4.2.4-3は、2つのUPFがPDUセッションのためにIPUPS機能と他のUP機能を実行するホームルーティングローミングアーキテクチャを示している。
+Figure 4.2.4-3 depicts the home routed roaming architecture where the two UPFs perform the IPUPS functionality and other UP functionality for the PDU Session.
+
+	注釈8: オペレータは、IPUPS機能をUPFとは別のネットワーク機能として展開し、N4およびN9インターフェースを透過的に読み取ることができる透過的なプロキシとして動作させることができます。
+	Operators are not prohibited from deploying the IPUPS functionality as a separate Network Function from the UPF, acting as a transparent proxy which can transparently read N4 and N9 interfaces. 
+	しかし、そのような展開オプションは仕様化されておらず、少なくとも頻繁にトラフィックが発生しない非常に長期間継続するPDUセッションやInter-PLMNハンドオーバーを考慮する必要があります。 
+	However,such deployment option is not specified and needs to take at least into account very long lasting PDU Sessions with infrequent traffic and Inter-PLMN handover.
+
+IPUPS機能は、5.8.2.14節とTS 33.501 [29]で規定されています。
+The IPUPS functionality is specified in clause 5.8.2.14 and TS 33.501 [29].
