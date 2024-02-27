@@ -1171,3 +1171,101 @@ Figure 4.2.5a-2 depicts the related interfaces in AMF and UCMF for the Radio Cap
 
 
 4.2.6 Service-based interfaces
+
+5Gシステムアーキテクチャは、以下のサービスベースのインターフェースを含みます。
+The 5G System Architecture contains the following service-based interfaces:
+	
+	Namf: AMFが提供するサービスベースのインターフェース。
+	Namf: Service-based interface exhibited by AMF.
+
+	Nsmf: SMFが提供するサービスベースのインターフェース。
+	Nsmf: Service-based interface exhibited by SMF.
+
+	Nnef: NEFが提供するサービスベースのインターフェース。
+	Nnef: Service-based interface exhibited by NEF.
+
+	Npcf: PCFが提供するサービスベースのインターフェース。
+	Npcf: Service-based interface exhibited by PCF.
+
+	Nudm: UDMが提供するサービスベースのインターフェース。
+	Nudm: Service-based interface exhibited by UDM.
+
+	Naf: AFが提供するサービスベースのインターフェース。
+	Naf: Service-based interface exhibited by AF.
+
+	Nnrf: NRFが提供するサービスベースのインターフェース。
+	Nnrf: Service-based interface exhibited by NRF.
+
+	Nnsacf: NSACFが提供するサービスベースのインターフェース。
+	Nnsacf: Service-based interface exhibited by NSACF.
+
+	Nnssaaf: NSSAAFが提供するサービスベースのインターフェース。
+	Nnssaaf: Service-based interface exhibited by NSSAAF.
+
+	Nnssf: NSSFが提供するサービスベースのインターフェース。
+	Nnssf: Service-based interface exhibited by NSSF. 
+
+	Nausf: AUSFが提供するサービスベースのインタフェース。
+	Nausf: Service-based interface exhibited by AUSF.
+
+	Nudr: UDRが提供するサービスベースのインタフェース。
+	Nudr: Service-based interface exhibited by UDR.
+
+	Nudsf: UDSFが提供するサービスベースのインタフェース。
+	Nudsf: Service-based interface exhibited by UDSF.
+
+	N5g-eir: 5G-EIRが提供するサービスベースのインタフェース。
+	N5g-eir: Service-based interface exhibited by 5G-EIR.
+
+	Nnwdaf: NWDAFが提供するサービスベースのインタフェース。
+	Nnwdaf: Service-based interface exhibited by NWDAF.
+
+	Nchf: CHFが提供するサービスベースのインタフェース。
+	Nchf: Service-based interface exhibited by CHF.
+
+	Nucmf: UCMFが提供するサービスベースのインタフェース。
+	Nucmf: Service-based interface exhibited by UCMF.
+
+	Ndccf: DCCFが提供するサービスベースのインタフェース。
+	Ndccf: Service based interface exhibited by DCCF.
+
+	Nmfaf: MFAFが提供するサービスベースのインタフェース。
+	Nmfaf: Service based interface exhibited by MFAF.
+
+	Nadrf: ADRFが提供するサービスベースのインタフェース。
+	Nadrf: Service based interface exhibited by ADRF.
+
+	Naanf: AANFが提供するサービスベースのインタフェース。
+	Naanf: Service-based interface exhibited by AANF.
+
+		注釈1: AANFが提供するサービスベースのインタフェースは、TS 33.535 [124]で定義されています。
+		NOTE 1: The Service-based interface exhibited by AANF is defined in TS 33.535 [124].
+
+	N5g-ddnmf: 5G DDNMFが提供するサービスベースのインタフェース。
+	N5g-ddnmf: Service-based interface exhibited by 5G DDNMF.
+
+	Nmbsmf: MB-SMFが提供するサービスベースのインタフェース。
+	Nmbsmf: Service-based interface exhibited by MB-SMF.
+
+	Nmbsf: MBSFが提供するサービスベースのインタフェース。
+	Nmbsf: Service-based interface exhibited by MBSF.
+
+		注釈2: MB-SMFとMBSFが提供するサービスベースのインタフェースは、TS 23.247 [129]で定義されています。
+		NOTE 2: The Service-based interfaces exhibited by MB-SMF and MBSF are defined in TS 23.247 [129].
+
+	Ntsctsf: TSCTSFが提供するサービスベースのインタフェース。
+	Ntsctsf: Service-based interface exhibited by TSCTSF.
+
+	Nbsp: GBAのSBI対応ブートストラッピングサーバ機能が提供するサービスベースのインタフェース。
+	Nbsp: GBAのSBI対応ブートストラッピングサーバ機能が提供するサービスベースのインタフェース。
+
+		注釈2: SBI対応ブートストラッピングサーバ機能が提供するサービスベースのインタフェースは、TS 33.220 [140]とTS 33.223 [141]で定義されています。
+		NOTE 2: The Service-based interfaces exhibited by an SBI capable Boostrapping Server Function are defined in TS 33.220 [140] and TS 33.223 [141].
+
+	Neasdf: EASDFが提供するサービスベースのインタフェース。
+	Neasdf: Service-based interface exhibited by EASDF.
+
+		注釈3: EASDFが提供するサービスベースのインタフェースは、TS 23.548 [130]で定義されています。
+		NOTE 3: The Service-based interfaces exhibited by EADSF is defined in TS 23.548 [130]. 
+
+4.2.7 Reference Points
