@@ -1525,5 +1525,97 @@ The architecture to support Untrusted and Trusted non-3GPP access networks is de
 有線アクセスネットワークをサポートするためのアーキテクチャは、4.2.8.2.4節とTS 23.316 [84]で定義されています。
 The architecture to support Wireline access networks is defined in clause 4.2.8.2.4 and in TS 23.316 [84].
 
+
 4.2.8.1 General Concepts to Support Trusted and Untrusted Non-3GPP Access
 
+5Gコアネットワークは、例えばWLANアクセスネットワークなどの非3GPPアクセスネットワークを介したUEの接続をサポートします。
+The 5G Core Network supports connectivity of UEs via non-3GPP access networks, e.g. WLAN access networks.
+
+この節では、NG-RANの外部に展開された非3GPPアクセスネットワークのサポートのみが説明されています。
+Only the support of non-3GPP access networks deployed outside the NG-RAN is described in this clause.
+
+5Gコアネットワークは、信頼できない非3GPPアクセスネットワークと信頼できる非3GPPアクセスネットワーク（TNANs）の両方をサポートします。
+The 5G Core Network supports both untrusted non-3GPP access networks and trusted non-3GPP access networks (TNANs).
+
+信頼できない非3GPPアクセスネットワークは、非3GPPインターワーキング機能（N3IWF）を介して5Gコアネットワークに接続する必要がありますが、信頼できる非3GPPアクセスネットワークは、信頼できる非3GPPゲートウェイ機能（TNGF）を介して5Gコアネットワークに接続する必要があります。An untrusted non-3GPP access network shall be connected to the 5G Core Network via a Non-3GPP InterWorking Function (N3IWF), whereas a trusted non-3GPP access network shall be connected to the 5G Core Network via a Trusted Non-3GPP Gateway Function (TNGF). 
+
+N3IWFとTNGFは、それぞれN2インターフェースとN3インターフェースを介して5GコアネットワークのCPとUP機能と接続します。
+Both the N3IWF and the TNGF interface with the 5G Core Network CP and UP functions via the N2 and N3 interfaces, respectively.
+
+非3GPPアクセスネットワークは、信頼できる接続をサポートするPLMNとその接続のタイプ（例えば「5G接続」）を広告することができます。
+A non-3GPP access network may advertise the PLMNs for which it supports trusted connectivity and the type of supported trusted connectivity (e.g. "5G connectivity").
+
+したがって、UEは、1つ以上のPLMNに信頼できる接続を提供できる非3GPPアクセスネットワークを発見することができます。
+Therefore, the UEs can discover the non-3GPP access networks that can provide trusted connectivity to one or more PLMNs.
+
+これは、節6.3.12（信頼できる非3GPPアクセスネットワークの選択）でさらに詳述されています。
+This is further specified in clause 6.3.12 (Trusted Non-3GPP Access Network selection). 
+
+UEは、この文書で指定されていない手順を使用して、信頼できる非3GPPアクセスまたは信頼できない非3GPPアクセスを使用して5G PLMNに接続するかどうかを決定します。そのような手順の例は、節6.3.12.1に定義されています。
+The UE decides to use trusted or untrusted non-3GPP access for connecting to a 5G PLMN by using procedures not specified in this document. Examples of such procedures are defined in clause 6.3.12.1.
+
+UEが信頼できない非3GPPアクセスを使用してPLMNの5Gコアネットワークに接続することを決定した場合：
+When the UE decides to use untrusted non-3GPP access to connect to a 5G Core Network in a PLMN:
+
+	- UEはまず非3GPPアクセスネットワークを選択し、接続します。その後、
+	- UEはまず非3GPPアクセスネットワークを選択し、接続します。その後、
+
+	- UEはPLMNとこのPLMNのN3IWFを選択します。PLMN/N3IWFの選択と非3GPPアクセスネットワークの選択は独立しています。N3IWFの選択は、節6.3.6で定義されています。
+	- the UE selects a PLMN and an N3IWF in this PLMN. The PLMN/N3IWF selection and the non-3GPP access network selection are independent. The N3IWF selection is defined in clause 6.3.6. 
+
+UEが信頼できる非3GPPアクセスを使用してPLMNの5Gコアネットワークに接続することを決定した場合：
+When the UE decides to use trusted non-3GPP access to connect to a 5G Core Network in a PLMN:
+
+        - UEはまずPLMNを選択します。その後、
+	- the UE first selects a PLMN; and then
+
+	- UEは、選択したPLMNへの信頼できる接続をサポートする非3GPPアクセスネットワーク（TNAN）を選択します。この場合、非3GPPアクセスネットワークの選択はPLMNの選択に影響を受けます。
+	- the UE selects a non-3GPP access network (a TNAN) that supports trusted connectivity to the selected PLMN.In this case, the non-3GPP access network selection is affected by the PLMN selection.
+
+非3GPPアクセスを介して5GコアネットワークにアクセスするUEは、UE登録後、N1参照点を使用して5GコアネットワークC-Plane機能とのNAS信号をサポートする必要があります。
+A UE that accesses the 5G Core Network over a non-3GPP access shall, after UE registration, support NAS signalling with 5G Core Network control-plane functions using the N1 reference point.
+
+UEがNG-RANと非3GPPアクセスの両方を介して接続されている場合、UEには複数のN1インスタンスが存在する必要があります。つまり、NG-RAN上に1つのN1インスタンスと非3GPPアクセス上に1つのN1インスタンスが存在します。
+When a UE is connected via a NG-RAN and via a non-3GPP access, multiple N1 instances shall exist for the UE i.e. there shall be one N1 instance over NG-RAN and one N1 instance over non-3GPP access.
+
+3GPPアクセスと非3GPPアクセスの両方で同じ5GコアネットワークのPLMNに同時に接続されているUEは、この5Gコアネットワークの単一のAMFによって提供されます。
+A UE simultaneously connected to the same 5G Core Network of a PLMN over a 3GPP access and a non-3GPP access shall be served by a single AMF in this 5G Core Network.
+
+UEがPLMNの3GPPアクセスに接続されている場合、UEがN3IWFを選択し、そのN3IWFが3GPPアクセスのPLMNとは異なるPLMNに位置している場合、例えば異なるVPLMNまたはHPLMNに位置している場合、UEは2つのPLMNによって別々に提供されます。
+When a UE is connected to a 3GPP access of a PLMN, if the UE selects a N3IWF and the N3IWF is located in a PLMN different from the PLMN of the 3GPP access, e.g. in a different VPLMN or in the HPLMN, the UE is served separately by the two PLMNs. 
+
+UEは2つの別々のAMFに登録されます。
+The UE is registered with two separate AMFs.
+
+3GPPアクセスでのPDUセッションは、非3GPPアクセスでのPDUセッションを提供するV-SMFとは異なるV-SMFによって提供される。
+PDU Sessions over the 3GPP access are served by V-SMFs different from the V-SMF serving the PDU Sessions over the non-3GPP access.
+
+同様に、UEが信頼できる非3GPPアクセスを使用する場合、つまり、UEが3GPPアクセスのために1つのPLMNを選択し、信頼できる非3GPPアクセスのために別のPLMNを選択する場合もある。
+The same can be true when the UE uses trusted non-3GPP access, i.e. the UE may select one PLMN for 3GPP access and a different PLMN for trusted non-3GPP access.
+
+	注釈: 異なるアクセスタイプで異なるPLMNに登録することは、5.40節で説明されている災害ローミングサービスに登録されたUEには適用されない。
+	NOTE: The registrations with different PLMNs over different Access Types doesn't apply to UE registered for Disaster Roaming service as described in the clause 5.40.
+
+3GPPアクセスのために選択されたPLMNは、非3GPPアクセスで使用されるPLMNに依存しない。
+The PLMN selection for the 3GPP access does not depend on the PLMN that is used for non-3GPP access.
+
+言い換えると、UEが非3GPPアクセスであるPLMNに登録されている場合、UEは3GPPアクセスのためのPLMN選択を、このPLMNとは独立して行う。
+In other words, if a UE is registered with a PLMN over a non-3GPP access, the UE performs PLMN selection for the 3GPP access independently of this PLMN.
+
+UEは、非3GPPアクセス経由で5Gコアネットワークに登録するために、N3IWFまたはTNGFとの間にIPsecトンネルを確立しなければならない。
+A UE shall establish an IPsec tunnel with the N3IWF or with the TNGF in order to register with the 5G Core Network over non-3GPP access.
+
+信頼できない非3GPPアクセス経由でのUEの5Gコアネットワークへの登録と、信頼できる非3GPPアクセス経由でのUEの5Gコアネットワークへの登録の詳細については、TS 23.502 [3]の4.12.2節と4.12.2a節にそれぞれ記載されている。
+Further details about the UE registration to 5G Core Network over untrusted non-3GPP access and over trusted non-3GPP access are described in clause 4.12.2 and in clause 4.12.2a of TS 23.502 [3], respectively.
+
+そのアクセス経由でのUEのすべてのPDUセッションが解放されたり、3GPPアクセスにハンドオーバーされたりした後も、非3GPPアクセス経由でAMFとのUE NASシグナリング接続を維持することができるべきである。
+It shall be possible to maintain the UE NAS signalling connection with the AMF over the non-3GPP access after all the PDU Sessions for the UE over that access have been released or handed over to 3GPP access.
+
+非3GPPアクセス経由でのN1 NASシグナリングは、3GPPアクセス経由でのN1に適用される同じセキュリティメカニズムで保護されるべきである。
+N1 NAS signalling over non-3GPP accesses shall be protected with the same security mechanism applied for N1 over a 3GPP access.
+
+UEとN3IWFの間のユーザプレーンQoSの差別化は、5.7節とTS 23.502 [3]の4.12.5節で説明されているようにサポートされる。UEとTNGFの間のQoSの差別化は、5.7節とTS 23.502 [3]の4.12a.5節で説明されているようにサポートされる。
+User plane QoS differentiation between UE and N3IWF is supported as described in clause 5.7 and clause 4.12.5 of TS 23.502 [3]. QoS differentiation between UE and TNGF is supported as described in clause 5.7 and clause 4.12a.5 of TS 23.502 [3].
+
+
+4.2.8.1A General Concepts to support Wireline Access
