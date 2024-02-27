@@ -1269,3 +1269,237 @@ The 5G System Architecture contains the following service-based interfaces:
 		NOTE 3: The Service-based interfaces exhibited by EADSF is defined in TS 23.548 [130]. 
 
 4.2.7 Reference Points
+
+5Gシステムアーキテクチャには、以下の参照点が含まれています。
+The 5G System Architecture contains the following service-based interfaces:
+
+	N1: UEとAMFの間の参照点。
+	N1: Reference point between the UE and the AMF. 
+
+	N2: (R)ANとAMFの間の参照点。
+	N2: Reference point between the (R)AN and the AMF.
+
+	N3: (R)ANとUPFの間の参照点。
+	N3: Reference point between the (R)AN and the UPF.
+
+	N4: SMFとUPFの間の参照点。
+	N4: Reference point between the SMF and the UPF.
+
+	N6: UPFとデータネットワークの間の参照点。
+	N6: Reference point between the UPF and a Data Network.
+
+	N9: 2つのUPFの間の参照点。
+	N9: Reference point between two UPFs.
+
+以下の参照点は、NF内のNFサービス間の相互作用を示しています。これらの参照点は、対応するNFサービスベースのインターフェースによって実現され、特定のシステム手順を実現するために、識別された消費者と生産者のNFサービスおよびその相互作用を指定します。
+
+	N5: PCFとAFまたはTSN AFの間の参照点。
+	N5: Reference point between the PCF and an AF or TSN AF. 
+
+	N7: SMFとPCFの間の参照点。
+	N7: Reference point between the SMF and the PCF.
+
+	N8: UDMとAMFの間の参照点。
+	N8: Reference point between the UDM and the AMF.
+
+	N10: UDMとSMFの間の参照点。
+	N10: Reference point between the UDM and the SMF.
+
+	N11: AMFとSMFの間の参照点。.
+	N11: Reference point between the AMF and the SMF.
+
+	N12: AMFとAUSFの間の参照点。
+	N12: Reference point between AMF and AUSF..
+
+	N13: UDMと認証サーバ機能であるAUSFの間の参照点。
+	N13: Reference point between the UDM and Authentication Server function the AUSF.
+
+	N14: 二つのAMFの間の参照点。
+	N14: Reference point between two AMFs.
+
+	N15: ローミングシナリオではない場合のPCFとAMFの間の参照点、ローミングシナリオでは訪問先ネットワークのPCFとAMFの間の参照点。
+	N15: Reference point between the PCF and the AMF in the case of non-roaming scenario, PCF in the visited network and AMF in the case of roaming scenario.
+
+	N16: 二つのSMFの間の参照点（ローミングシナリオでは訪問先ネットワークのSMFとホームネットワークのSMFの間）。
+	N16: Reference point between two SMFs, (in roaming case between SMF in the visited network and the SMF in the home network).
+
+	N16a: SMFとI-SMFの間の参照点。
+	N16a: Reference point between SMF and I-SMF.
+
+	N17: AMFと5G-EIRの間の参照点。
+	N17: Reference point between AMF and 5G-EIR.
+
+	N18: 任意のNFとUDSFの間の参照点。
+	N18: 任意のNFとUDSFの間の参照点。
+
+	N19: 5G LAN型サービスのための二つのPSA UPFの間の参照点。
+	N19: Reference point between two PSA UPFs for 5G LAN-type service.
+
+	N22: AMFとNSSFの間の参照点。
+	N22: Reference point between AMF and NSSF.
+
+	N23: PCFとNWDAFの間の参照点。
+	N23: Reference point between PCF and NWDAF.
+
+	N24: 訪問先ネットワークのPCFとホームネットワークのPCFの間の参照点。
+	N24: Reference point between the PCF in the visited network and the PCF in the home network.
+
+	N27: 訪問先ネットワークのNRFとホームネットワークのNRFの間の参照点。
+	N27: Reference point between NRF in the visited network and the NRF in the home network.
+
+	N28: PCFとCHFの間の参照点。
+	N28: Reference point between PCF and CHF.
+
+	N29: NEFとSMFの間の参照点。
+	N29: Reference point between NEF and SMF.
+
+	N30: PCFとNEFの間の参照点。
+	N30: Reference point between PCF and NEF.
+
+		注釈1: N28、N29、N30の参照点の機能はTS 23.503 [45]で定義されている。
+		NOTE 1: The functionality of N28 and N29 and N30 reference points are defined in TS 23.503 [45].
+
+	N31: 訪問先ネットワークのNSSFとホームネットワークのNSSFの間の参照点。
+	N31: Reference point between the NSSF in the visited network and the NSSF in the home network.
+
+		注釈2: いくつかの場合では、UEをサービスするために、二つのNFが互いに関連付けられる必要がある場合がある。
+		NOTE 2: In some cases, a couple of NFs may need to be associated with each other to serve a UE.
+
+	N32: 一つのPLMNまたはSNPNのSEPPと別のPLMNまたはSNPNのSEPPの間の参照点；またはSNPNのSEPPとCH/DCSのSEPPの間の参照点で、CH/DCSはUDM/AUSFを含む。
+	N32: Reference point between a SEPP in one PLMN or SNPN and a SEPP in another PLMN or SNPN; or between a SEPP in a SNPN and a SEPP in a CH/DCS, where the CH/DCS contains a UDM/AUSF.
+
+		注釈3: N32の参照点の機能はTS 33.501 [29]で定義されている。
+		NOTE 3: The functionality of N32 reference point is defined in TS 33.501 [29].
+
+	N33: NEFとAFの間の参照点。
+	N33: Reference point between NEF and AF.
+
+	N34: NSSFとNWDAFの間の参照点。
+	N34: Reference point between NSSF and NWDAF.
+
+	N35: UDMとUDRの間の参照点。
+	N35: Reference point between UDM and UDR.
+
+	N36: PCFとUDRの間の参照点。
+	N36: Reference point between PCF and UDR.
+
+	N37: NEFとUDRの間の参照点。
+	N37: Reference point between NEF and UDR.
+
+	N38: I-SMF同士とV-SMF同士の間の参照点。
+	N38: Reference point between I-SMFs and between V-SMFs.
+
+	N40: SMFとCHFの間の参照点。
+	N40: Reference point between SMF and the CHF.
+
+	N41: HPLMNのAMFとCHFの間の参照点。
+	N41: Reference point between AMF and CHF in HPLMN.
+
+	N42: VPLMNのAMFとCHFの間の参照点。
+	N42: Reference point between AMF and CHF in VPLMN.
+
+		注釈4: N40、N41、N42の参照点の機能はTS 32.240 [41]で定義されている。
+		NOTE 4: The functionality of N40, N41 and N42 reference points are defined in TS 32.240 [41].
+
+	N43: PCF同士の間の参照点。
+	N43: Reference point between PCFs.
+
+		注釈5: N43の参照点の機能はTS 23.503 [45]で定義されている。
+		NOTE 5: The functionality of N43 reference point is defined in TS 23.503 [45].
+
+		注釈6: N44からN49までの参照点は、TS 32.240 [41]で割り当てと定義のために予約されている。
+		NOTE 6: The reference points from N44 up to and including N49 are reserved for allocation and definition in TS 32.240 [41].
+
+	N50: AMFとCBCFの間の参照点。
+	N50: Reference point between AMF and the CBCF.
+
+	N51: AMFとNEFの間の参照点。
+	N51: Reference point between AMF and NEF.
+
+	N52: NEFとUDMの間の参照点。
+	N52: Reference point between NEF and UDM.
+
+	N55: AMFとUCMFの間の参照点。
+	N55: Reference point between AMF and the UCMF.
+
+	N56: NEFとUCMFの間の参照点。
+	N56: Reference point between NEF and the UCMF.
+
+	N57: AFとUCMFの間の参照点。
+	N57: Reference point between AF and the UCMF.
+
+		注釈7: N50の参照点の公共警報システムの機能はTS 23.041 [46]で定義されている。
+		NOTE 7: The Public Warning System functionality of N50 reference point is defined in TS 23.041 [46].
+
+	N58: AMFとNSSAAFの間の参照点。
+	N58: Reference point between AMF and the NSSAAF.
+
+	N59: UDMとNSSAAFの間の参照点。
+	N59: Reference point between UDM and the NSSAAF.
+
+	N60: AUSFとNSWOFの間の参照点。
+	N60: Reference point between AUSF and NSWOF.
+
+		N60: Reference point between AUSF and NSWOF.
+		NOTE 8: The functionality of N60 reference point is defined in TS 33.501 [29].
+
+	N80: AMFとNSACFの間の参照点。
+	N80: Reference point between AMF and NSACF.
+
+	N81: SMFとNSACFの間の参照点。
+	N81: Reference point between SMF and NSACF.
+
+	N82: NSACFとNEFの間の参照点。
+	N82: Reference point between NSACF and NEF.
+
+	N83: AUSFとNSSAAFの間の参照点。
+	N83: Reference point between AUSF and NSSAAF.
+
+	N84: TSCTSFとPCFの間の参照点。
+	N84: Reference point between TSCTSF and PCF.
+
+	N85: TSCTSFとNEFの間の参照点。
+	N85: Reference point between TSCTSF and NEF.
+
+	N86: TSCTSFとAFの間の参照点。
+	N86: Reference point between TSCTSF and AF.
+
+	N87: TSCTSFとUDMの間の参照点。
+	N87: Reference point between TSCTSF and UDM.
+
+	N88: SMFとEASDFの間の参照点。
+	N88: Reference point between SMF and EASDF.
+
+		注釈9: N90からN95までの参照点は、TS 23.503 [45]で割り当てと定義のために予約されている。
+		NOTE 9: The reference points from N90 up to and including N95 are reserved for allocation and definition in TS 23.503 [45].
+
+SMS over NASをサポートするための参照点は、4.4.2.2節に記載されています。
+The reference points to support SMS over NAS are listed in clause 4.4.2.2.
+
+位置情報サービスをサポートするための参照点は、TS 23.273 [87]に記載されています。
+The reference points to support Location Services are listed in TS 23.273 [87].
+
+IMSでのSBAをサポートするための参照点（N5、N70、N71）は、TS 23.228 [15]に記述されています。
+The reference points to support SBA in IMS (N5, N70 and N71) are described in TS 23.228 [15].
+
+AKMAをサポートするための参照点（N61、N62、N63）は、TS 33.535 [124]に記述されています。
+The reference points to support AKMA (N61, N62 and N63) are described in TS 33.535 [124].
+
+5G ProSeをサポートするための参照点は、TS 23.304 [128]に記述されています。
+The reference points to support 5G ProSe are described in TS 23.304 [128].
+
+5Gマルチキャスト・ブロードキャストサービスをサポートするための参照点は、TS 23.247 [129]に記述されています。
+The reference points to support 5G multicast-broadcast services are described in TS 23.247 [129].
+
+無人航空システム（UAS）の接続、識別、追跡をサポートするための参照点は、TS 23.256 [136]に記述されています。
+The reference points to Support Uncrewed Aerial Systems (UAS) connectivity, identification and tracking are described in TS 23.256 [136].
+
+GBAおよびGBAプッシュでのSBAをサポートするための参照点（N65、N66、N67、N68）は、TS 33.220 [140]およびTS 33.223 [141]に記述されています。
+The reference points to support SBA in GBA and GBA push (N65, N66, N67 and N68) are described in TS 33.220 [140] and TS 33.223 [141].
+
+SBAを使用したSMS配信をサポートするための参照点は、TS 23.540 [142]に記述されています。
+The reference points to support SMS delivery using SBA are described in TS 23.540 [142].
+
+
+4.2.8 Support of non-3GPP access
+4.2.8.0 General
