@@ -1506,3 +1506,24 @@ The reference points to support SMS delivery using SBA are described in TS 23.54
 
 4.2.8 Support of non-3GPP access
 4.2.8.0 General
+
+この仕様のこのリリースでは、以下の種類の非3GPPアクセスネットワークが定義されています。
+In this Release of the specification, the following types of non-3GPP access networks are defined:
+
+	- 信頼できない非3GPPアクセスネットワーク；
+	- Untrusted non-3GPP access networks;
+
+	- 信頼できる非3GPPアクセスネットワーク；および
+	- Trusted non-3GPP access networks; and
+
+	- 有線アクセスネットワーク
+	- Wireline access networks
+
+信頼できない非3GPPアクセスネットワークと信頼できる非3GPPアクセスネットワークをサポートするためのアーキテクチャは、4.2.8.2節で定義されています。
+The architecture to support Untrusted and Trusted non-3GPP access networks is defined in clause 4.2.8.2.
+
+有線アクセスネットワークをサポートするためのアーキテクチャは、4.2.8.2.4節とTS 23.316 [84]で定義されています。
+The architecture to support Wireline access networks is defined in clause 4.2.8.2.4 and in TS 23.316 [84].
+
+4.2.8.1 General Concepts to Support Trusted and Untrusted Non-3GPP Access
+
