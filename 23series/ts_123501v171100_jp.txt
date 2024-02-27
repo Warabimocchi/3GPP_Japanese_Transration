@@ -1522,5 +1522,40 @@ The architecture to support Untrusted and Trusted non-3GPP access networks is de
 有線アクセスネットワークをサポートするためのアーキテクチャは、4.2.8.2.4節とTS 23.316 [84]で定義されています。
 The architecture to support Wireline access networks is defined in clause 4.2.8.2.4 and in TS 23.316 [84].
 
+
 4.2.8.1 General Concepts to Support Trusted and Untrusted Non-3GPP Access
 
+5Gコアネットワークは、例えばWLANアクセスネットワークなどの非3GPPアクセスネットワークを介したUEの接続をサポートします。
+The 5G Core Network supports connectivity of UEs via non-3GPP access networks, e.g. WLAN access networks.
+
+この節では、NG-RANの外部に展開された非3GPPアクセスネットワークのサポートのみが説明されています。
+Only the support of non-3GPP access networks deployed outside the NG-RAN is described in this clause.
+
+5Gコアネットワークは、信頼できない非3GPPアクセスネットワークと信頼できる非3GPPアクセスネットワーク（TNANs）の両方をサポートします。
+The 5G Core Network supports both untrusted non-3GPP access networks and trusted non-3GPP access networks (TNANs).
+
+信頼できない非3GPPアクセスネットワークは、非3GPPインターワーキング機能（N3IWF）を介して5Gコアネットワークに接続する必要がありますが、信頼できる非3GPPアクセスネットワークは、信頼できる非3GPPゲートウェイ機能（TNGF）を介して5Gコアネットワークに接続する必要があります。An untrusted non-3GPP access network shall be connected to the 5G Core Network via a Non-3GPP InterWorking Function (N3IWF), whereas a trusted non-3GPP access network shall be connected to the 5G Core Network via a Trusted Non-3GPP Gateway Function (TNGF). 
+
+N3IWFとTNGFは、それぞれN2インターフェースとN3インターフェースを介して5GコアネットワークのCPとUP機能と接続します。
+Both the N3IWF and the TNGF interface with the 5G Core Network CP and UP functions via the N2 and N3 interfaces, respectively.
+
+非3GPPアクセスネットワークは、信頼できる接続をサポートするPLMNとその接続のタイプ（例えば「5G接続」）を広告することができます。
+A non-3GPP access network may advertise the PLMNs for which it supports trusted connectivity and the type of supported trusted connectivity (e.g. "5G connectivity").
+
+したがって、UEは、1つ以上のPLMNに信頼できる接続を提供できる非3GPPアクセスネットワークを発見することができます。
+Therefore, the UEs can discover the non-3GPP access networks that can provide trusted connectivity to one or more PLMNs.
+
+これは、節6.3.12（信頼できる非3GPPアクセスネットワークの選択）でさらに詳述されています。
+This is further specified in clause 6.3.12 (Trusted Non-3GPP Access Network selection). 
+
+UEは、この文書で指定されていない手順を使用して、信頼できる非3GPPアクセスまたは信頼できない非3GPPアクセスを使用して5G PLMNに接続するかどうかを決定します。そのような手順の例は、節6.3.12.1に定義されています。
+The UE decides to use trusted or untrusted non-3GPP access for connecting to a 5G PLMN by using procedures not specified in this document. Examples of such procedures are defined in clause 6.3.12.1.
+
+UEが信頼できない非3GPPアクセスを使用してPLMNの5Gコアネットワークに接続することを決定した場合：
+When the UE decides to use untrusted non-3GPP access to connect to a 5G Core Network in a PLMN:
+
+	- UEはまず非3GPPアクセスネットワークを選択し、接続します。その後、
+	- UEはまず非3GPPアクセスネットワークを選択し、接続します。その後、
+
+	- UEはPLMNとこのPLMNのN3IWFを選択します。PLMN/N3IWFの選択と非3GPPアクセスネットワークの選択は独立しています。N3IWFの選択は、節6.3.6で定義されています。
+	- the UE selects a PLMN and an N3IWF in this PLMN. The PLMN/N3IWF selection and the non-3GPP access 'network selection are independent. The N3IWF selection is defined in clause 6.3.6. 
