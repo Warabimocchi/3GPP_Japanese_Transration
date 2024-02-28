@@ -1616,3 +1616,40 @@ User plane QoS differentiation between UE and N3IWF is supported as described in
 
 
 4.2.8.1A General Concepts to support Wireline Access
+
+Wireline 5G Access Network (W-5GAN)は、Wireline Access Gateway Function (W-AGF)を介して5G Core Networkに接続されます。W-AGFは、N2およびN3インターフェースを介して5G Core Network CPおよびUP機能とインターフェースします。
+Wireline 5G Access Network (W-5GAN) shall be connected to the 5G Core Network via a Wireline Access Gateway Function (W-AGF). The W-AGF interfaces the 5G Core Network CP and UP functions via N2 and N3 interfaces,respectively.
+
+5G-RGがNG RANを介して接続されているシナリオでは、本TSで定義されたUEの仕様（TS 23.502 [3]およびTS 23.503 [45]）は、TS 23.316 [84]で異なる指定がない限り、NG RANを介して5GCに接続されたUEに適用されます。
+For the scenario of 5G-RG connected via NG RAN the specification for UE defined in this TS, TS 23.502 [3] and TS 23.503 [45] are applicable as defined for UE connected to 5GC via NG RAN unless differently specified in this TS and in TS 23.316 [84].
+
+5G-RGがNG-RANおよびW-5GANを介して接続されている場合、5G-RGのために複数のN1インスタンスが存在します。つまり、NG-RANを介した1つのN1インスタンスとW-5GANを介した1つのN1インスタンスがあります。
+When a 5G-RG is connected via a NG-RAN and via a W-5GAN, multiple N1 instances shall exist for the 5G-RG i.e.there shall be one N1 instance over NG-RAN and one N1 instance over W-5GAN.
+
+同じPLMNの同じ5G Core Networkに3GPPアクセスとW-5GANアクセスを介して接続されている5G-RGは、この5G Core Network内の単一のAMFによってサービスされます。
+A 5G-RG simultaneously connected to the same 5G Core Network of a PLMN over a 3GPP access and a W-5GAN access shall be served by a single AMF in this 5G Core Network.
+
+5G-RGは、そのアクセスに対するすべてのPDUセッションが解放されたか、3GPPアクセスに引き継がれた後も、W-5GANを介してAMFとNASシグナリング接続を維持します。
+5G-RG shall maintain the NAS signalling connection with the AMF over the W-5GAN after all the PDU Sessions for the 5G-RG over that access have been released or handed over to 3GPP access.
+
+5GCを介してNG-RANに接続された5G-RGの仕様は、TS 23.316 [84]で指定されています。
+The 5G-RG connected to 5GC via NG-RAN is specified in TS 23.316 [84].
+
+5G対応でないFN-RGがW-5GANを介して5GCに接続されているシナリオでは、W-AGFがFN-RGの代理でAMFに対するN1インターフェースを提供します。
+For the scenario of FN-RG, which is not 5G capable, connected via W-5GAN to 5GC, the W-AGF provides the N1 interface to AMF on behalf of the FN-RG.
+
+5G-RGまたはFN-RGに接続されたUEは、N3IWFまたはTNGFを介して5GCにアクセスできます。ここで、5G-RG/FN-RG、W-AGF、および5G-RGまたはFN-RGにサービスを提供するUPFの組み合わせは、それぞれ、非信頼性のある非3GPPアクセスネットワークまたは3GPP非信頼性のあるアクセスネットワークとして機能します（4.2.8.2で定義）。
+An UE connected to a 5G-RG or FN-RG can access to the 5GC via the N3IWF or via the TNGF where the combination of 5G-RG/FN-RG, W-AGF and UPF serving the 5G-RG or FN-RG is acting respectively as Untrusted Non-3GPP access network or as a Trusted Non-3GPP access network defined in clause 4.2.8.2; 
+たとえば、UEはWLAN無線アクセスを介して5G-RGに接続し、N3IWFを介して5GCに接続しています。詳細な説明はTS 23.316で指定されています。
+for example a UE is connecting to 5G-RG by means of WLAN radio access and connected to 5GC via N3IWF. The detailed description is specified in TS 23.316 [84]. 
+
+5G-BRG、FN-BRG、5G-CRG、およびFN-CRGのローミングアーキテクチャは、このリリースでは指定されていません。ホームルーテッドローミングシナリオは、NG RANを介して接続された5G-RGに対してサポートされていますが、ローカルブレークアウトシナリオはサポートされていません。
+The roaming architecture for 5G-BRG, FN-BRG, 5G-CRG and FN-CRG with the W-5GAN is not specified in this Release. The Home Routed roaming scenario is supported for 5G-RG connected via NG RAN, while Local Breakout scenario is not supported.
+
+5G Multi-Operator Core Network（5G MOCN）は、NG RANを介して接続された5G-RGに対して、5.18節で定義されているようにサポートされています。
+5G Multi-Operator Core Network (5G MOCN) is supported for 5G-RG connected via NG RAN as defined in clause 5.18.
+
+
+4.2.8.2 Architecture Reference Model for Trusted and Untrusted Non-3GPP Accesses 
+
+4.2.8.1 Non-roaming Architecture
