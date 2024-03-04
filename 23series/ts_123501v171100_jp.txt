@@ -1654,5 +1654,15 @@ The roaming architecture for 5G-BRG, FN-BRG, 5G-CRG and FN-CRG with the W-5GAN i
 
 
 4.2.8.2 Architecture Reference Model for Trusted and Untrusted Non-3GPP Accesses 
+4.2.8.2.1 Non-roaming Architecture
+	注釈1: 図4.2.8.2.1-1と図4.2.8.2.1-2の参照アーキテクチャは、非3GPPアクセスに直接接続されているアーキテクチャとネットワーク機能だけを示していて、他の部分のアーキテクチャは4.2項で定義されたものと同じです。
+	NOTE 1: The reference architecture in Figure 4.2.8.2.1-1 and in Figure 4.2.8.2.1-2 only shows the architecture and the network functions directly connected to non-3GPP access, and other parts of the architecture are the same as defined in clause 4.2
 
-4.2.8.1 Non-roaming Architecture
+	注釈2: 図4.2.8.2.1-1と図4.2.8.2.1-2の参照アーキテクチャは、図に示されていないAMF、SMF、および他のNFに対するサービスベースのインターフェースをサポートしています。
+	NOTE 2: The reference architecture in Figure 4.2.8.2.1-1 and in Figure 4.2.8.2.1-2 supports service based interfaces for AMF, SMF and other NFs not represented in the figure.
+
+	注釈3: 図4.2.8.2.1-1と図4.2.8.2.1-2の2つのN2インスタンスは、3GPPアクセスと非3GPPアクセスの両方で同じ5Gコアネットワークに同時に接続されているUEのために、単一のAMFに終端します。
+	NOTE 3: The two N2 instances in Figure 4.2.8.2.1-1 and in Figure 4.2.8.2.1-2 terminate to a single AMF for a UE which is simultaneously connected to the same 5G Core Network over 3GPP access and non-3GPP access.
+
+	注釈4: 図4.2.8.2.1-1と図4.2.8.2.1-2の2つのN3インスタンスは、3GPPアクセスと非3GPPアクセスの両方で異なるPDUセッションが確立された場合、異なるUPFに終端することがあります。
+	NOTE 4: The two N3 instances in Figure 4.2.8.2.1-1 and in Figure 4.2.8.2.1-2 may terminate to different UPFs when different PDU Sessions are established over 3GPP access and non-3GPP access.
